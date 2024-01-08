@@ -1,21 +1,18 @@
 <template>
-  <VApp>
-    <AppBar />
-    <VMain>
+  <VMain>
+    <div>
       <VContainer>
-        <div>
-          <h1>Sewa Mobil</h1>
-          <h1>Dengan Mudah!</h1>
-        </div>
+        <h1>Sewa Mobil</h1>
+        <h1>Dengan Mudah!</h1>
       </VContainer>
+    </div>
 
-      <div id="unit-mobil">
-        <VContainer>
-          <h2 class="text-center">Unit Mobil Kami</h2>
-        </VContainer>
-      </div>
-    </VMain>
-  </VApp>
+    <div id="unit-mobil">
+      <VContainer>
+        <h2 class="text-center">Unit Mobil Kami</h2>
+      </VContainer>
+    </div>
+  </VMain>
 </template>
 
 <style scoped>

@@ -1,5 +1,12 @@
 <template>
-  <div>
+  <VApp>
+    <AppBar />
     <NuxtPage />
-  </div>
+  </VApp>
 </template>
+
+<style>
+* {
+  font-family: 'Roboto', sans-serif;
+}
+</style>
