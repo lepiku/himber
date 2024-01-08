@@ -26,13 +26,13 @@ const cars: Car[] = [
 
 <template>
   <VMain>
-    <div id="depan">
+    <div id="judul">
       <VContainer class="d-flex justify-space-between py-6">
         <div class="d-flex flex-column justify-center">
           <h1>Sewa Mobil</h1>
           <h1>Dengan Mudah!</h1>
         </div>
-        <NuxtImg src="/cars-landing.jpg" sizes="0 sm:50vw md:400px lg:600px" />
+        <NuxtImg src="/cars-landing.jpg" sizes="50vw md:400px lg:600px" />
       </VContainer>
     </div>
 
@@ -44,16 +44,15 @@ const cars: Car[] = [
             v-for="(car, idx) in cars"
             :key="idx"
             class="car-card ma-3 border-shadow"
+            style="max-width: 360px"
           >
             <div
               class="d-flex flex-column align-center bg-white rounded-xl pa-4 pb-8"
-              style="width: 360px"
             >
               <NuxtImg
                 :src="car.img"
                 class="car-card-img"
-                width="300"
-                height="150"
+                sizes="80vw xs:300"
               />
               <h4 class="text-center">{{ car.name }}</h4>
             </div>
@@ -108,45 +107,44 @@ const cars: Car[] = [
   </VMain>
 
   <div id="kontak" class="bg-primary">
-    <VContainer class="py-6">
+    <VContainer class="pt-6 pb-12">
       <h2>Hubungi Kami</h2>
       <VRow>
-        <VCol cols="6">
+        <VCol cols="12" md="6">
           <div class="d-flex flex-column align-start">
             <p class="my-2">HARAPAN INDAH MAJU BERSAMA RENTAL</p>
             <VBtn
               color="primary"
               variant="flat"
               prepend-icon="mdi-phone"
-              href="tel:082112020542"
+              href="tel:082112593113"
+              class="text-none"
             >
-              08 211 2020 542
+              0821-1259-3113 (Herni)
             </VBtn>
             <VBtn
               color="primary"
               variant="flat"
               prepend-icon="mdi-email"
-              href="mailto:herni.arimbi@gmail.com"
+              href="mailto:herni.sasadara@gmail.com"
+              class="text-none"
             >
-              herni.arimbi@gmail.com
-            </VBtn>
-            <VBtn
-              color="primary"
-              variant="flat"
-              prepend-icon="mdi-email"
-              href="mailto:vidi.septianto99@gmail.com"
-            >
-              vidi.septianto99@gmail.com
+              herni.sasadara@gmail.com
             </VBtn>
           </div>
         </VCol>
-        <VCol cols="6">
+        <VCol cols="12" md="6">
           <p class="my-2">Alamat:</p>
-          <p class="my-2">
+          <p class="mt-2 mb-4">
             Ruko ARALIA Blok HY 36 No. 37 Harapan Indah 2, Pusaka Rakyat, Taruma
             Jaya, Kab. Bekasi, Jawa Barat
           </p>
-          <VBtn color="indigo-darken-2" variant="flat" to="/tentang-kami">
+          <VBtn
+            to="/tentang-kami"
+            color="indigo-darken-2"
+            variant="flat"
+            prepend-icon="mdi-information"
+          >
             Tentang Kami
           </VBtn>
         </VCol>
@@ -156,12 +154,22 @@ const cars: Car[] = [
 </template>
 
 <style scoped>
-.card-buttons .v-btn {
+@media (max-width: 600px) {
+  #judul h1 {
+    font-size: 5vw;
+  }
+}
+
+#unit-mobil .card-buttons .v-btn {
   border-radius: 18px;
   background-color: white;
 }
 
 #visi-misi p {
   margin: 6px 0;
+}
+
+#kontak .v-btn {
+  letter-spacing: unset;
 }
 </style>

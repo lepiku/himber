@@ -4,6 +4,7 @@ import colors from 'vuetify/util/colors'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['vuetify-nuxt-module', '@nuxtjs/google-fonts', '@nuxt/image'],
+  ssr: true,
   routeRules: {
     '/': { prerender: true },
     '/tentang-kami': { prerender: true }

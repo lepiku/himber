@@ -9,4 +9,8 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+
+.v-container {
+  max-width: 1200px !important;
+}
 </style>
