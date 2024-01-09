@@ -2,6 +2,7 @@
   <VApp>
     <AppBar />
     <NuxtPage />
+    <AppFooter />
   </VApp>
 </template>
 
