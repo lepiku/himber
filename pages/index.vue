@@ -1,27 +1,8 @@
 <script setup lang="ts">
-type Car = { name: string; img: string }
-const cars: Car[] = [
-  {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
-  },
-  {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
-  },
-  {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
-  },
-  {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
-  },
-  {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
-  }
-]
+import { cars, website } from '@/data'
+
+const p = website.contact.phone
+const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)
 </script>
 
 <template>
@@ -52,14 +33,19 @@ const cars: Car[] = [
               <NuxtImg
                 :src="car.img"
                 class="car-card-img"
+                quality="20"
                 sizes="80vw xs:300"
               />
               <h4 class="text-center">{{ car.name }}</h4>
             </div>
             <div class="card-buttons mt-n4 px-4 d-flex justify-center">
-              <VBtn color="secondary" class="font-weight-bold"
-                >Sewa Sekarang</VBtn
+              <VBtn
+                color="secondary"
+                class="font-weight-bold"
+                :href="generateWhatsappLink(car.name)"
               >
+                Sewa Sekarang
+              </VBtn>
               <!-- <VBtn color="secondary" variant="outlined">
                 <VIcon icon="mdi-dots-horizontal" />
               </VBtn> -->
@@ -107,37 +93,36 @@ const cars: Car[] = [
   </VMain>
 
   <div id="kontak" class="bg-primary">
-    <VContainer class="pt-6 pb-12">
+    <VContainer class="pt-6 pb-16">
       <h2>Hubungi Kami</h2>
       <VRow>
         <VCol cols="12" md="6">
           <div class="d-flex flex-column align-start">
-            <p class="my-2">HARAPAN INDAH MAJU BERSAMA RENTAL</p>
+            <p class="my-2 text-uppercase">{{ website.name }}</p>
             <VBtn
               color="primary"
               variant="flat"
               prepend-icon="mdi-phone"
-              href="tel:082112593113"
+              :href="'tel:' + website.contact.phone"
               class="text-none"
             >
-              0821-1259-3113 (Herni)
+              {{ phoneFormat }} (Herni)
             </VBtn>
             <VBtn
               color="primary"
               variant="flat"
               prepend-icon="mdi-email"
-              href="mailto:herni.sasadara@gmail.com"
+              :href="'mailto:' + website.contact.email"
               class="text-none"
             >
-              herni.sasadara@gmail.com
+              {{ website.contact.email }}
             </VBtn>
           </div>
         </VCol>
         <VCol cols="12" md="6">
           <p class="my-2">Alamat:</p>
           <p class="mt-2 mb-4">
-            Ruko ARALIA Blok HY 36 No. 37 Harapan Indah 2, Pusaka Rakyat, Taruma
-            Jaya, Kab. Bekasi, Jawa Barat
+            {{ website.contact.address }}
           </p>
           <VBtn
             to="/tentang-kami"

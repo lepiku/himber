@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { website } from '@/data'
+
 const navItems = [
   {
     text: 'Beranda',
@@ -21,7 +23,7 @@ const drawer = ref(false)
       <NuxtImg src="/logo.png" width="100" height="39" class="ml-4" />
     </template>
 
-    <VAppBarTitle>Harapan Indah Maju Bersama Rental</VAppBarTitle>
+    <VAppBarTitle>{{ website.name }}</VAppBarTitle>
     <template v-slot:append>
       <div class="app-bar-desktop mr-4">
         <VBtn
@@ -50,7 +52,7 @@ const drawer = ref(false)
   >
     <VList>
       <VListItem>
-        <VListItemTitle>Harapan Indah Maju Bersama Rental</VListItemTitle>
+        <VListItemTitle>{{ website.name }}</VListItemTitle>
       </VListItem>
       <VListItem
         v-for="(item, i) in navItems"
