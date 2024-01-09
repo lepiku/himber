@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { cars } from '~/data'
+import { type Car, cars } from '~/data'
+
+const car = ref<Car | null>(null)
+const dialog = ref(false)
+
+const viewCar = (c: Car) => {
+  car.value = c
+  dialog.value = true
+}
 </script>
 
 <template>
@@ -25,15 +33,17 @@ import { cars } from '~/data'
             style="max-width: 360px"
           >
             <div
-              class="d-flex flex-column align-center bg-white rounded-xl pa-4 pb-8"
+              class="card-content d-flex flex-column align-center text-indigo-lighten-3 rounded-xl pa-4 pb-8"
+              @click="viewCar(car)"
+              v-ripple
             >
               <NuxtImg
                 :src="car.img"
-                class="car-card-img"
+                class="card-img"
                 quality="20"
                 sizes="80vw xs:300"
               />
-              <h4 class="text-center">{{ car.name }}</h4>
+              <h4 class="text-center text-black">{{ car.name }}</h4>
             </div>
             <div class="card-buttons mt-n4 px-4 d-flex justify-center">
               <VBtn
@@ -43,13 +53,27 @@ import { cars } from '~/data'
               >
                 Sewa Sekarang
               </VBtn>
-              <!-- <VBtn color="secondary" variant="outlined">
-                <VIcon icon="mdi-dots-horizontal" />
-              </VBtn> -->
             </div>
           </div>
         </div>
       </VContainer>
+
+      <VDialog v-model="dialog" width="auto">
+        <VCard v-if="car" :title="car.name">
+          <VCardText>Lorem ipsum</VCardText>
+          <VCardActions>
+            <VBtn
+              color="secondary"
+              variant="elevated"
+              class="font-weight-bold"
+              :href="generateWhatsappLink(car.name)"
+            >
+              Sewa Sekarang
+            </VBtn>
+            <VBtn color="primary" @click="dialog = false">Tutup</VBtn>
+          </VCardActions>
+        </VCard>
+      </VDialog>
     </div>
 
     <div id="visi-misi">
@@ -97,6 +121,10 @@ import { cars } from '~/data'
   }
 }
 
+#unit-mobil .card-content {
+  background-color: white;
+  cursor: pointer;
+}
 #unit-mobil .card-buttons .v-btn {
   border-radius: 18px;
   background-color: white;

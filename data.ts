@@ -37,7 +37,7 @@ export const aboutUs = [
 '
 ]
 
-type Car = { name: string; img: string }
+export type Car = { name: string; img: string }
 export const cars: Car[] = [
   {
     name: 'Mitsubishi Triton',
