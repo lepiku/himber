@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { cars, website } from '@/data'
+import { cars, website } from '~/data'
 
 const p = website.contact.phone
 const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)

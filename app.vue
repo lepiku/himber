@@ -13,4 +13,7 @@
 .v-container {
   max-width: 1200px !important;
 }
+p {
+  margin: 6px 0;
+}
 </style>

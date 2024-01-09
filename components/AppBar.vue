@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { website } from '@/data'
+import { website } from '~/data'
 
 const navItems = [
   {
