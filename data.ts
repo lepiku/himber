@@ -48,7 +48,7 @@ type CarPhoto = { img: string; title: string }
 export const cars: Car[] = [
   {
     name: 'Toyota Zenix (2023)',
-    price: 0,
+    price: 600000,
     img: '/images/car-unit/mitsubishi-triton.png',
     photos: [
       {
@@ -74,7 +74,7 @@ export const cars: Car[] = [
   {
     name: 'Toyota Veloz (2023)',
     img: '/images/car-unit/mitsubishi-triton.png',
-    price: 0,
+    price: 600000,
     photos: [
       {
         title: 'Depan',
@@ -112,7 +112,7 @@ export const cars: Car[] = [
   {
     name: 'Mitsubishi Pajero Sport (2018)',
     img: '/images/car-unit/mitsubishi-triton.png',
-    price: 0,
+    price: 2000000,
     photos: [
       {
         title: 'Depan',
@@ -137,7 +137,7 @@ export const cars: Car[] = [
   {
     name: 'Jeep Rubicon',
     img: '/images/car-unit/mitsubishi-triton.png',
-    price: 0,
+    price: 20000000,
     photos: [
       {
         title: 'Depan',
@@ -158,7 +158,7 @@ export const cars: Car[] = [
   {
     name: 'Honda CRV',
     img: '/images/car-unit/mitsubishi-triton.png',
-    price: 0,
+    price: 2000000,
     photos: [
       {
         title: 'Depan',

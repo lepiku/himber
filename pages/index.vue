@@ -36,9 +36,17 @@ const viewCar = (c: Car) => {
             style="max-width: 360px"
           >
             <div
-              class="card-content d-flex flex-column align-center text-indigo-lighten-3 rounded-xl pa-4 pb-8"
+              :class="[
+                'card-content',
+                'd-flex',
+                'flex-column',
+                'align-center',
+                'rounded-xl',
+                'pa-4',
+                'pb-8'
+              ]"
               @click="viewCar(car)"
-              v-ripple
+              v-ripple="{ class: 'text-indigo-lighten-3' }"
             >
               <NuxtImg
                 :src="car.img"
@@ -47,6 +55,7 @@ const viewCar = (c: Car) => {
                 sizes="80vw xs:300"
               />
               <h4 class="text-center text-black">{{ car.name }}</h4>
+              <p>Rp {{ car.price.toLocaleString('id') }} / hari</p>
             </div>
             <div class="card-buttons mt-n4 px-4 d-flex justify-center">
               <VBtn
@@ -85,7 +94,17 @@ const viewCar = (c: Car) => {
           <VCol
             cols="10"
             md="5"
-            class="bg-indigo-lighten-5 rounded-xl pa-4 mx-8 my-4 text-center d-flex flex-column justify-center"
+            :class="[
+              'bg-indigo-lighten-5',
+              'rounded-xl',
+              'pa-4',
+              'mx-8',
+              'my-4',
+              'text-center',
+              'd-flex',
+              'flex-column',
+              'justify-center'
+            ]"
           >
             <h2 class="text-secondary">Visi</h2>
             <p>
@@ -96,7 +115,17 @@ const viewCar = (c: Car) => {
           <VCol
             cols="10"
             md="5"
-            class="bg-indigo-lighten-5 rounded-xl pa-4 mx-8 my-4 text-center d-flex flex-column justify-center"
+            :class="[
+              'bg-indigo-lighten-5',
+              'rounded-xl',
+              'pa-4',
+              'mx-8',
+              'my-4',
+              'text-center',
+              'd-flex',
+              'flex-column',
+              'justify-center'
+            ]"
           >
             <h2 class="text-secondary">Misi</h2>
             <p>
