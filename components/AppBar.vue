@@ -20,7 +20,7 @@ const drawer = ref(false)
 <template>
   <VAppBar color="primary">
     <template v-slot:prepend>
-      <NuxtImg src="/logo.png" width="100" height="39" class="ml-4" />
+      <NuxtImg src="/images/logo.png" width="100" height="39" class="ml-4" />
     </template>
 
     <VAppBarTitle>{{ website.name }}</VAppBarTitle>

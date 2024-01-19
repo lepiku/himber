@@ -18,7 +18,10 @@ const viewCar = (c: Car) => {
           <h1>Sewa Mobil</h1>
           <h1>Dengan Mudah!</h1>
         </div>
-        <NuxtImg src="/cars-landing.jpg" sizes="50vw md:400px lg:600px" />
+        <NuxtImg
+          src="/images/cars-landing.jpg"
+          sizes="50vw md:400px lg:600px"
+        />
       </VContainer>
     </div>
 

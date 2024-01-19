@@ -37,26 +37,143 @@ export const aboutUs = [
 '
 ]
 
-export type Car = { name: string; img: string }
+export type Car = {
+  name: string
+  img: string
+  price: number
+  photos: CarPhoto[]
+  desc: [string, string][]
+}
+type CarPhoto = { img: string; title: string }
 export const cars: Car[] = [
   {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
+    name: 'Toyota Zenix (2023)',
+    price: 0,
+    img: '/images/car-unit/mitsubishi-triton.png',
+    photos: [
+      {
+        title: 'Depan',
+        img: '/images/car-photo/toyota-zenix-2023-front.jpg'
+      },
+      {
+        title: 'Kiri',
+        img: '/images/car-photo/toyota-zenix-2023-left.jpg'
+      },
+      {
+        title: 'Kanan',
+        img: '/images/car-photo/toyota-zenix-2023-right.jpg'
+      }
+    ],
+    desc: [
+      ['Model', 'Toyota Kijang Innova Zenix (2023)'],
+      ['Warna', 'Hitam'],
+      ['Mesin', '?Bensin / Hybrid'],
+      ['Penumpang', '2 Depan, 2 Tengah, 3 Belakang']
+    ]
   },
   {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
+    name: 'Toyota Veloz (2023)',
+    img: '/images/car-unit/mitsubishi-triton.png',
+    price: 0,
+    photos: [
+      {
+        title: 'Depan',
+        img: '/images/car-photo/toyota-veloz-2023-front.jpg'
+      },
+      {
+        title: 'Kanan',
+        img: '/images/car-photo/toyota-veloz-2023-right.jpg'
+      }
+    ],
+    desc: [
+      ['Model', 'Toyota Veloz (2023)'],
+      ['Warna', 'Putih'],
+      ['Mesin', 'Bensin'],
+      ['Penumpang', '?2 Depan, 2 Tengah, 2 Belakang']
+    ]
   },
   {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
+    name: 'Toyota Hilux (2023)',
+    img: '/images/car-unit/mitsubishi-triton.png',
+    price: 0,
+    photos: [
+      {
+        title: 'Depan Kiri',
+        img: '/images/car-photo/toyota-hilux-2023-frontleft.jpg'
+      }
+    ],
+    desc: [
+      ['Model', 'Toyota Hilux (2023)'],
+      ['Warna', 'Silver'],
+      ['Mesin', 'Bensin'],
+      ['Penumpang', '2 Depan, 3 Belakang']
+    ]
   },
   {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
+    name: 'Mitsubishi Pajero Sport (2018)',
+    img: '/images/car-unit/mitsubishi-triton.png',
+    price: 0,
+    photos: [
+      {
+        title: 'Depan',
+        img: '/images/car-photo/mitsubishi-pajero-2018-front.jpg'
+      },
+      {
+        title: 'Kiri',
+        img: '/images/car-photo/mitsubishi-pajero-2018-left.jpg'
+      },
+      {
+        title: 'Belakang',
+        img: '/images/car-photo/mitsubishi-pajero-2018-back.jpg'
+      }
+    ],
+    desc: [
+      ['Model', 'Mitsubishi Pajero Sport (2018)'],
+      ['Warna', 'Putih'],
+      ['Mesin', '?4WD Diesel'],
+      ['Penumpang', '?2 Depan, 3 Belakang']
+    ]
   },
   {
-    name: 'Mitsubishi Triton',
-    img: '/cars/mitsubishi-triton.png'
+    name: 'Jeep Rubicon',
+    img: '/images/car-unit/mitsubishi-triton.png',
+    price: 0,
+    photos: [
+      {
+        title: 'Depan',
+        img: '/images/car-photo/jeep-rubicon-front.jpg'
+      },
+      {
+        title: 'Kiri',
+        img: '/images/car-photo/jeep-rubicon-kiri.jpg'
+      }
+    ],
+    desc: [
+      ['Model', 'Jeep Rubicon'],
+      ['Warna', '?Putih'],
+      ['Mesin', '?Bensin'],
+      ['Penumpang', '?2 Depan, 3 Belakang']
+    ]
+  },
+  {
+    name: 'Honda CRV',
+    img: '/images/car-unit/mitsubishi-triton.png',
+    price: 0,
+    photos: [
+      {
+        title: 'Depan',
+        img: '/images/car-photo/honda-crv-front.jpg'
+      },
+      {
+        title: 'Kanan',
+        img: '/images/car-photo/honda-crv-right.jpg'
+      }
+    ],
+    desc: [
+      ['Model', 'Honda CRV Black Edition'],
+      ['Warna', 'Hitam'],
+      ['Mesin', '?Bensin'],
+      ['Penumpang', '?2 Depan, 3 Belakang']
+    ]
   }
 ]
