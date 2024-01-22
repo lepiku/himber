@@ -1,5 +1,9 @@
 import colors from 'vuetify/util/colors'
 
+import { cars } from './data'
+
+const carPhotos = cars.flatMap((c) => c.photos.map((p) => p.img))
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -8,6 +12,14 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
     '/tentang-kami': { prerender: true }
+  },
+  nitro: {
+    prerender: {
+      routes: [
+        ...carPhotos.map((i) => '/_ipx/fit_contain&s_500x500' + i),
+        ...carPhotos.map((i) => '/_ipx/s_50x50' + i)
+      ]
+    }
   },
   vuetify: {
     vuetifyOptions: {

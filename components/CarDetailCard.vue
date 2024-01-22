@@ -82,7 +82,7 @@ const selectedPhoto = ref(0)
 }
 .floating-buttons {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: sticky;
   bottom: 0;
   right: 0;

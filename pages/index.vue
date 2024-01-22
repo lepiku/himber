@@ -34,28 +34,38 @@ const viewCar = (c: Car) => {
             :key="idx"
             class="car-card ma-3 border-shadow"
           >
-            <div
-              :class="[
-                'card-content',
-                'd-flex',
-                'flex-column',
-                'align-center',
-                'rounded-xl',
-                'pa-4',
-                'pb-6'
-              ]"
-              @click="viewCar(car)"
-              v-ripple="{ class: 'text-indigo-lighten-3' }"
-            >
-              <NuxtImg
-                :src="car.img"
-                class="card-img"
-                quality="20"
-                sizes="80vw xs:300"
-              />
-              <h4 class="text-center text-black">{{ car.name }}</h4>
-              <p>Rp {{ car.price.toLocaleString('id') }} / hari</p>
-            </div>
+            <VDialog width="auto">
+              <template #activator="{ props }">
+                <div
+                  v-bind="props"
+                  :class="[
+                    'card-content',
+                    'd-flex',
+                    'flex-column',
+                    'align-center',
+                    'rounded-xl',
+                    'pa-4',
+                    'pb-6'
+                  ]"
+                  @click="viewCar(car)"
+                  v-ripple="{ class: 'text-indigo-lighten-3' }"
+                >
+                  <NuxtImg
+                    :src="car.img"
+                    class="card-img"
+                    quality="20"
+                    sizes="80vw xs:300"
+                  />
+                  <h4 class="text-center text-black">{{ car.name }}</h4>
+                  <p>Rp {{ car.price.toLocaleString('id') }} / hari</p>
+                </div>
+              </template>
+
+              <template #default="{ isActive }">
+                <CarDetailCard :car="car" @close="isActive.value = false" />
+              </template>
+            </VDialog>
+
             <div class="card-buttons px-4 d-flex justify-center rounded-pill">
               <VBtn
                 color="secondary"
@@ -68,10 +78,6 @@ const viewCar = (c: Car) => {
           </div>
         </div>
       </VContainer>
-
-      <VDialog v-model="dialog" width="auto">
-        <CarDetailCard v-if="car" :car="car" @close="() => (dialog = false)" />
-      </VDialog>
     </div>
 
     <div id="visi-misi">
