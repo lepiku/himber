@@ -33,7 +33,6 @@ const viewCar = (c: Car) => {
             v-for="(car, idx) in cars"
             :key="idx"
             class="car-card ma-3 border-shadow"
-            style="max-width: 360px"
           >
             <div
               :class="[
@@ -43,7 +42,7 @@ const viewCar = (c: Car) => {
                 'align-center',
                 'rounded-xl',
                 'pa-4',
-                'pb-8'
+                'pb-6'
               ]"
               @click="viewCar(car)"
               v-ripple="{ class: 'text-indigo-lighten-3' }"
@@ -57,7 +56,7 @@ const viewCar = (c: Car) => {
               <h4 class="text-center text-black">{{ car.name }}</h4>
               <p>Rp {{ car.price.toLocaleString('id') }} / hari</p>
             </div>
-            <div class="card-buttons mt-n4 px-4 d-flex justify-center">
+            <div class="card-buttons px-4 d-flex justify-center">
               <VBtn
                 color="secondary"
                 class="font-weight-bold"
@@ -71,11 +70,7 @@ const viewCar = (c: Car) => {
       </VContainer>
 
       <VDialog v-model="dialog" width="auto">
-        <CarDetailCard
-          v-if="car"
-          :car="car"
-          :onClose="() => (dialog = false)"
-        />
+        <CarDetailCard v-if="car" :car="car" @close="() => (dialog = false)" />
       </VDialog>
     </div>
 
@@ -144,9 +139,15 @@ const viewCar = (c: Car) => {
   }
 }
 
+#unit-mobil .car-card {
+  max-width: 332px;
+}
 #unit-mobil .card-content {
   background-color: white;
   cursor: pointer;
+}
+#unit-mobil .card-buttons {
+  margin-top: -18px;
 }
 #unit-mobil .card-buttons .v-btn {
   border-radius: 18px;

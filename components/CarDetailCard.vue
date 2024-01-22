@@ -7,15 +7,20 @@ const selectedPhoto = ref(0)
 </script>
 
 <template>
-  <VCard v-if="car" :title="car.name">
-    <VCardText>
-      <div class="mx-n1">
+  <VCard width="548">
+    <div class="card-header d-flex align-center bg-white px-6 py-2">
+      <h3>{{ car.name }}</h3>
+      <VSpacer />
+      <VBtn @click="onClose" icon="mdi-close" variant="text" color="primary" />
+    </div>
+    <VCardText class="pt-0">
+      <div>
         <NuxtImg
           :src="car.photos[selectedPhoto].img"
           fit="contain"
-          width="600"
-          height="600"
-          class="rounded-lg mx-1"
+          width="500"
+          height="500"
+          class="rounded-lg"
         />
       </div>
       <div class="d-flex overflow-x-auto mx-n1 mb-4">
@@ -31,7 +36,7 @@ const selectedPhoto = ref(0)
         />
       </div>
       <VDivider />
-      <VContainer class="my-4">
+      <VContainer>
         <VRow v-for="(row, i) in car.desc" :key="i" class="my-2">
           <VCol cols="12" sm="4" class="px-0 px-sm-1 py-0 text-grey-darken-2">
             {{ row[0] }}
@@ -51,12 +56,18 @@ const selectedPhoto = ref(0)
       >
         Sewa Sekarang
       </VBtn>
-      <VBtn color="primary" @click="onClose">Tutup</VBtn>
     </VCardActions>
   </VCard>
 </template>
 
 <style scoped>
+.v-card {
+  position: relative;
+}
+.v-card .card-header {
+  position: sticky;
+  top: 0;
+}
 .img-preview.selected {
   outline: 4px solid rgb(var(--v-theme-secondary));
 }
