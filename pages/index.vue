@@ -56,10 +56,10 @@ const viewCar = (c: Car) => {
               <h4 class="text-center text-black">{{ car.name }}</h4>
               <p>Rp {{ car.price.toLocaleString('id') }} / hari</p>
             </div>
-            <div class="card-buttons px-4 d-flex justify-center">
+            <div class="card-buttons px-4 d-flex justify-center rounded-pill">
               <VBtn
                 color="secondary"
-                class="font-weight-bold"
+                class="font-weight-bold rounded-pill"
                 :href="generateWhatsappLink(car.name)"
               >
                 Sewa Sekarang
@@ -148,10 +148,6 @@ const viewCar = (c: Car) => {
 }
 #unit-mobil .card-buttons {
   margin-top: -18px;
-}
-#unit-mobil .card-buttons .v-btn {
-  border-radius: 18px;
-  background-color: white;
 }
 
 #visi-misi p {

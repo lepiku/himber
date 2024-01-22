@@ -7,20 +7,20 @@ const selectedPhoto = ref(0)
 </script>
 
 <template>
-  <VCard width="548">
+  <VCard>
     <div class="card-header d-flex align-center bg-white px-6 py-2">
       <h3>{{ car.name }}</h3>
       <VSpacer />
       <VBtn @click="onClose" icon="mdi-close" variant="text" color="primary" />
     </div>
-    <VCardText class="pt-0">
+    <VCardText class="py-0">
       <div>
         <NuxtImg
           :src="car.photos[selectedPhoto].img"
           fit="contain"
           width="500"
           height="500"
-          class="rounded-lg"
+          class="car-view rounded-lg"
         />
       </div>
       <div class="d-flex overflow-x-auto mx-n1 mb-4">
@@ -47,20 +47,26 @@ const selectedPhoto = ref(0)
         </VRow>
       </VContainer>
     </VCardText>
-    <VCardActions>
+    <div class="floating-buttons">
       <VBtn
         color="secondary"
         variant="elevated"
-        class="font-weight-bold"
+        class="font-weight-bold rounded-pill"
         :href="generateWhatsappLink(car.name)"
       >
         Sewa Sekarang
       </VBtn>
-    </VCardActions>
+    </div>
   </VCard>
 </template>
 
 <style scoped>
+.car-view {
+  width: calc(100vw - 96px);
+  height: calc(100vw - 96px);
+  max-width: 500px;
+  max-height: 500px;
+}
 .v-card {
   position: relative;
 }
@@ -73,5 +79,13 @@ const selectedPhoto = ref(0)
 }
 .img-preview:not(.selected) {
   cursor: pointer;
+}
+.floating-buttons {
+  display: flex;
+  justify-content: end;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  padding: 0 24px 24px;
 }
 </style>
