@@ -145,7 +145,7 @@ export const cars: Car[] = [
       },
       {
         title: 'Kiri',
-        img: '/images/car-photo/jeep-rubicon-kiri.jpg'
+        img: '/images/car-photo/jeep-rubicon-left.jpg'
       }
     ],
     desc: [

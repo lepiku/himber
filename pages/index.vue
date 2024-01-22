@@ -71,20 +71,11 @@ const viewCar = (c: Car) => {
       </VContainer>
 
       <VDialog v-model="dialog" width="auto">
-        <VCard v-if="car" :title="car.name">
-          <VCardText>Lorem ipsum</VCardText>
-          <VCardActions>
-            <VBtn
-              color="secondary"
-              variant="elevated"
-              class="font-weight-bold"
-              :href="generateWhatsappLink(car.name)"
-            >
-              Sewa Sekarang
-            </VBtn>
-            <VBtn color="primary" @click="dialog = false">Tutup</VBtn>
-          </VCardActions>
-        </VCard>
+        <CarDetailCard
+          v-if="car"
+          :car="car"
+          :onClose="() => (dialog = false)"
+        />
       </VDialog>
     </div>
 
