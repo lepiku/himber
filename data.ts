@@ -49,7 +49,7 @@ export const cars: Car[] = [
   {
     name: 'Toyota Zenix (2023)',
     price: 600000,
-    img: '/images/car-unit/mitsubishi-triton.png',
+    img: '/images/car-unit/toyota-zenix-2023.png',
     photos: [
       {
         title: 'Depan',
@@ -73,7 +73,7 @@ export const cars: Car[] = [
   },
   {
     name: 'Toyota Veloz (2023)',
-    img: '/images/car-unit/mitsubishi-triton.png',
+    img: '/images/car-unit/toyota-veloz-2023.png',
     price: 600000,
     photos: [
       {
@@ -94,7 +94,7 @@ export const cars: Car[] = [
   },
   {
     name: 'Toyota Hilux (2023)',
-    img: '/images/car-unit/mitsubishi-triton.png',
+    img: '/images/car-unit/toyota-hilux-2023.png',
     price: 0,
     photos: [
       {
@@ -111,7 +111,7 @@ export const cars: Car[] = [
   },
   {
     name: 'Mitsubishi Pajero Sport (2018)',
-    img: '/images/car-unit/mitsubishi-triton.png',
+    img: '/images/car-unit/mitsubishi-pajero-sport-2018.png',
     price: 2000000,
     photos: [
       {
@@ -136,7 +136,7 @@ export const cars: Car[] = [
   },
   {
     name: 'Jeep Rubicon',
-    img: '/images/car-unit/mitsubishi-triton.png',
+    img: '/images/car-unit/jeep-rubicon.png',
     price: 20000000,
     photos: [
       {
@@ -157,7 +157,7 @@ export const cars: Car[] = [
   },
   {
     name: 'Honda CRV',
-    img: '/images/car-unit/mitsubishi-triton.png',
+    img: '/images/car-unit/honda-crv.png',
     price: 2000000,
     photos: [
       {
