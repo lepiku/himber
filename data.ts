@@ -67,7 +67,7 @@ export const cars: Car[] = [
     desc: [
       ['Model', 'Toyota Kijang Innova Zenix (2023)'],
       ['Warna', 'Hitam'],
-      ['Mesin', '?Bensin / Hybrid'],
+      ['Mesin', 'Bensin (Pertalite)'],
       ['Penumpang', '2 Depan, 2 Tengah, 3 Belakang']
     ]
   },
@@ -88,14 +88,14 @@ export const cars: Car[] = [
     desc: [
       ['Model', 'Toyota Veloz (2023)'],
       ['Warna', 'Putih'],
-      ['Mesin', 'Bensin'],
-      ['Penumpang', '?2 Depan, 2 Tengah, 2 Belakang']
+      ['Mesin', 'Bensin (Pertalite)'],
+      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang']
     ]
   },
   {
     name: 'Toyota Hilux (2023)',
     img: '/images/car-unit/toyota-hilux-2023.png',
-    price: 0,
+    price: 2500000,
     photos: [
       {
         title: 'Depan Kiri',
@@ -105,7 +105,7 @@ export const cars: Car[] = [
     desc: [
       ['Model', 'Toyota Hilux (2023)'],
       ['Warna', 'Silver'],
-      ['Mesin', 'Bensin'],
+      ['Mesin', 'Bensin (Pertalite)'],
       ['Penumpang', '2 Depan, 3 Belakang']
     ]
   },
@@ -130,8 +130,8 @@ export const cars: Car[] = [
     desc: [
       ['Model', 'Mitsubishi Pajero Sport (2018)'],
       ['Warna', 'Putih'],
-      ['Mesin', '?4WD Diesel'],
-      ['Penumpang', '?2 Depan, 3 Belakang']
+      ['Mesin', '4WD Diesel (Dex / Dexlite)'],
+      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang']
     ]
   },
   {
@@ -150,9 +150,9 @@ export const cars: Car[] = [
     ],
     desc: [
       ['Model', 'Jeep Rubicon'],
-      ['Warna', '?Putih'],
-      ['Mesin', '?Bensin'],
-      ['Penumpang', '?2 Depan, 3 Belakang']
+      ['Warna', 'Silver'],
+      ['Mesin', 'Bensin (Pertalite)'],
+      ['Penumpang', '2 Depan, 3 Tengah']
     ]
   },
   {
@@ -172,8 +172,8 @@ export const cars: Car[] = [
     desc: [
       ['Model', 'Honda CRV Black Edition'],
       ['Warna', 'Hitam'],
-      ['Mesin', '?Bensin'],
-      ['Penumpang', '?2 Depan, 3 Belakang']
+      ['Mesin', 'Bensin (Pertamax)'],
+      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang']
     ]
   }
 ]
