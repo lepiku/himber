@@ -17,7 +17,9 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         ...carPhotos.map((i) => '/_ipx/fit_contain&s_500x500' + i),
+        ...carPhotos.map((i) => '/_ipx/fit_contain&s_1000x1000' + i),
         ...carPhotos.map((i) => '/_ipx/s_50x50' + i)
+        ...carPhotos.map((i) => '/_ipx/s_100x100' + i)
       ]
     }
   },
