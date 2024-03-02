@@ -1,5 +1,5 @@
 export const website = {
-  name: 'Maju Bersama Sewa Mobil',
+  name: 'Sewa Doang',
   contact: {
     phone: '082112593113',
     email: 'herni.sasadara@gmail.com',

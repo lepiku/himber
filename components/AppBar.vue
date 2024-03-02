@@ -23,7 +23,7 @@ const drawer = ref(false)
       <NuxtImg src="/images/logo.png" width="100" height="39" class="ml-4" />
     </template>
 
-    <VAppBarTitle>{{ website.name }}</VAppBarTitle>
+    <VAppBarTitle class="text-ephesis">{{ website.name }}</VAppBarTitle>
     <template v-slot:append>
       <div class="app-bar-desktop mr-4">
         <VBtn
@@ -73,6 +73,10 @@ const drawer = ref(false)
 .v-toolbar-title,
 .app-bar-desktop {
   display: none;
+}
+
+.v-app-bar-title {
+  font-size: 24pt;
 }
 
 @media (min-width: 600px) {

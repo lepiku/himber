@@ -7,7 +7,7 @@
 </template>
 
 <style>
-* {
+body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -16,5 +16,11 @@
 }
 p {
   margin: 6px 0;
+}
+
+.text-ephesis {
+  font-family: 'Ephesis';
+  font-weight: 400;
+  font-style: normal;
 }
 </style>

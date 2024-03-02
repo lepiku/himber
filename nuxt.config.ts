@@ -7,7 +7,18 @@ const carPhotos = cars.flatMap((c) => c.photos.map((p) => p.img))
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['vuetify-nuxt-module', '@nuxtjs/google-fonts', '@nuxt/image'],
+  modules: [
+    'vuetify-nuxt-module',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          Ephesis: true
+        }
+      }
+    ],
+    '@nuxt/image'
+  ],
   ssr: true,
   routeRules: {
     '/': { prerender: true },

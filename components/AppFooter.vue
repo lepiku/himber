@@ -12,7 +12,7 @@ const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)
       <VRow>
         <VCol cols="12" md="6">
           <div class="d-flex flex-column align-start">
-            <p class="my-2 text-uppercase">{{ website.name }}</p>
+            <p class="my-2 text-ephesis">{{ website.name }}</p>
             <VBtn
               color="primary"
               variant="flat"
@@ -53,8 +53,11 @@ const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)
   </div>
 </template>
 
-<style>
+<style scoped>
 #kontak .v-btn {
   letter-spacing: unset;
+}
+.text-ephesis {
+  font-size: 24pt;
 }
 </style>
