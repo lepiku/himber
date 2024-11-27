@@ -6,7 +6,7 @@ const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)
 </script>
 
 <template>
-  <div id="kontak" class="bg-primary">
+  <div id="kontak" class="bg-surface-variant">
     <VContainer class="pt-6 pb-16">
       <h2>Hubungi Kami</h2>
       <VRow>
@@ -14,7 +14,7 @@ const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)
           <div class="d-flex flex-column align-start">
             <p class="my-2 text-ephesis">{{ website.name }}</p>
             <VBtn
-              color="primary"
+              color="surface-variant"
               variant="flat"
               prepend-icon="mdi-phone"
               :href="'tel:' + website.contact.phone"
@@ -23,7 +23,7 @@ const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)
               {{ phoneFormat }} (Herni)
             </VBtn>
             <VBtn
-              color="primary"
+              color="surface-variant"
               variant="flat"
               prepend-icon="mdi-email"
               :href="'mailto:' + website.contact.email"
@@ -41,8 +41,8 @@ const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)
           <VBtn
             v-if="$route.path === '/'"
             to="/tentang-kami"
-            color="indigo-darken-2"
             variant="flat"
+            color="primary"
             prepend-icon="mdi-information"
           >
             Tentang Kami

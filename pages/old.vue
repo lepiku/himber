@@ -1,3 +1,3 @@
 <template>
-  <VMain />
+  <OldHomePage />
 </template>

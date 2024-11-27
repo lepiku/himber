@@ -48,7 +48,7 @@ const viewCar = (c: Car) => {
                     'pb-6'
                   ]"
                   @click="viewCar(car)"
-                  v-ripple="{ class: 'text-indigo-lighten-3' }"
+                  v-ripple="{ class: 'text-primary' }"
                 >
                   <NuxtImg
                     :src="car.img"
@@ -68,7 +68,7 @@ const viewCar = (c: Car) => {
 
             <div class="card-buttons px-4 d-flex justify-center rounded-pill">
               <VBtn
-                color="secondary"
+                color="tertiary"
                 class="font-weight-bold rounded-pill"
                 :href="generateWhatsappLink(car.name)"
               >

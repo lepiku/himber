@@ -23,4 +23,14 @@ p {
   font-weight: 400;
   font-style: normal;
 }
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
 </style>

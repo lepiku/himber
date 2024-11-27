@@ -1,6 +1,35 @@
-import colors from 'vuetify/util/colors'
+import { md3 } from 'vuetify/blueprints'
 
 import { cars } from './data'
+import materialTheme from './material-theme.json'
+
+const lightTheme = materialTheme.schemes.light
+const darkTheme = materialTheme.schemes.dark
+
+const getColors = (scheme: typeof lightTheme) => ({
+  primary: scheme.primary,
+  'on-primary': scheme.onPrimary,
+  'primary-container': scheme.primaryContainer,
+  'on-primary-container': scheme.onPrimaryContainer,
+  secondary: scheme.secondary,
+  'on-secondary': scheme.onSecondary,
+  tertiary: scheme.tertiary,
+  'on-tertiary': scheme.onTertiary,
+  success: scheme.primary,
+  'on-success': scheme.onPrimary,
+  error: scheme.error,
+  'on-error': scheme.onError,
+  background: scheme.surfaceContainer,
+  'on-background': scheme.onBackground,
+  surface: scheme.surface,
+  'on-surface': scheme.onSurface,
+  'surface-variant': scheme.surfaceVariant,
+  'on-surface-variant': scheme.onSurfaceVariant,
+  'surface-container': scheme.surfaceContainer,
+  'on-surface-container': scheme.onSurface,
+  'error-container': scheme.errorContainer,
+  'on-error-container': scheme.onErrorContainer
+})
 
 const carPhotos = cars.flatMap((c) => c.photos.map((p) => p.img))
 
@@ -36,16 +65,18 @@ export default defineNuxtConfig({
   },
   vuetify: {
     vuetifyOptions: {
+      blueprint: md3,
       theme: {
         defaultTheme: 'light',
         themes: {
           light: {
-            colors: {
-              primary: colors.indigo.darken1,
-              'on-primary': '#fff',
-              secondary: colors.orange.darken1,
-              'on-secondary': '#fff'
-            }
+            // colors: {
+            //   primary: colors.indigo.darken1,
+            //   'on-primary': '#fff',
+            //   secondary: colors.orange.darken1,
+            //   'on-secondary': '#fff'
+            // }
+            colors: getColors(darkTheme)
           }
         }
       }
@@ -67,5 +98,7 @@ export default defineNuxtConfig({
       xl: 1920,
       xxl: 2560
     }
-  }
+  },
+
+  compatibilityDate: '2024-11-27'
 })
