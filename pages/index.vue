@@ -1,3 +1,5 @@
 <template>
-  <VMain />
+  <VMain>
+    <LandingCover />
+  </VMain>
 </template>

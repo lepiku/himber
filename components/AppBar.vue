@@ -34,7 +34,7 @@ const drawer = ref(false)
         </VBtn>
       </div>
       <VSpacer />
-      <VBtn color="tertiary" variant="elevated" class="me-4 font-weight-bold">
+      <VBtn color="primary" variant="elevated" class="me-4 font-weight-bold">
         Book Now
       </VBtn>
     </div>
