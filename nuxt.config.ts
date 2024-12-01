@@ -1,6 +1,5 @@
 import { md3 } from 'vuetify/blueprints'
 
-import { cars } from './data'
 import materialTheme from './material-theme.json'
 
 const lightTheme = materialTheme.schemes.light
@@ -30,10 +29,8 @@ const getColors = (scheme: typeof lightTheme) => ({
   'error-container': scheme.errorContainer,
   'on-error-container': scheme.onErrorContainer,
   'inverse-surface': scheme.inverseSurface,
-  'on-inverse-surface': scheme.inverseOnSurface,
+  'on-inverse-surface': scheme.inverseOnSurface
 })
-
-const carPhotos = cars.flatMap((c) => c.photos.map((p) => p.img))
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -53,17 +50,8 @@ export default defineNuxtConfig({
   ssr: true,
   routeRules: {
     '/': { prerender: true },
+    '/old': { prerender: true },
     '/tentang-kami': { prerender: true }
-  },
-  nitro: {
-    prerender: {
-      routes: [
-        ...carPhotos.map((i) => '/_ipx/fit_contain&s_500x500' + i),
-        ...carPhotos.map((i) => '/_ipx/fit_contain&s_1000x1000' + i),
-        ...carPhotos.map((i) => '/_ipx/s_50x50' + i),
-        ...carPhotos.map((i) => '/_ipx/s_100x100' + i)
-      ]
-    }
   },
   vuetify: {
     vuetifyOptions: {
