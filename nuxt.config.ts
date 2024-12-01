@@ -28,7 +28,9 @@ const getColors = (scheme: typeof lightTheme) => ({
   'surface-container': scheme.surfaceContainer,
   'on-surface-container': scheme.onSurface,
   'error-container': scheme.errorContainer,
-  'on-error-container': scheme.onErrorContainer
+  'on-error-container': scheme.onErrorContainer,
+  'inverse-surface': scheme.inverseSurface,
+  'on-inverse-surface': scheme.inverseOnSurface,
 })
 
 const carPhotos = cars.flatMap((c) => c.photos.map((p) => p.img))
@@ -76,8 +78,9 @@ export default defineNuxtConfig({
             //   secondary: colors.orange.darken1,
             //   'on-secondary': '#fff'
             // }
-            colors: getColors(darkTheme)
-          }
+            colors: getColors(lightTheme)
+          },
+          dark: { colors: getColors(darkTheme) }
         }
       }
     }
