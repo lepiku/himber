@@ -35,6 +35,6 @@ export const getThemeColors = (scheme: typeof lightTheme) => ({
   'on-inverse-surface': scheme.inverseOnSurface,
 })
 
-export const theme = materialTheme
+export const appTheme = materialTheme
 export const lightTheme = materialTheme.schemes.light
 export const darkTheme = materialTheme.schemes.dark

@@ -9,7 +9,6 @@ const groupedCars = computed(() => {
     } else {
       result[result.length - 1].push(c)
     }
-    console.log(result)
   })
   return result
 })
