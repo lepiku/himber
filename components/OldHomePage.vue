@@ -12,7 +12,7 @@ const viewCar = (c: Car) => {
 
 <template>
   <VMain>
-    <div id="judul">
+    <div id="judul" class="bg-surface">
       <VContainer class="d-flex justify-space-between py-6">
         <div class="d-flex flex-column justify-center">
           <h1>Sewa Mobil</h1>
@@ -25,7 +25,7 @@ const viewCar = (c: Car) => {
       </VContainer>
     </div>
 
-    <div id="unit-mobil" class="bg-indigo-lighten-4">
+    <div id="unit-mobil" class="bg-indigo-lighten-5">
       <VContainer class="py-6">
         <h2 class="text-center mb-2">Unit Mobil Kami</h2>
         <div class="d-flex flex-wrap justify-center">
@@ -80,7 +80,7 @@ const viewCar = (c: Car) => {
       </VContainer>
     </div>
 
-    <div id="visi-misi">
+    <div id="visi-misi" class="bg-surface">
       <VContainer class="d-flex py-16">
         <VRow justify="center">
           <VCol
@@ -98,7 +98,7 @@ const viewCar = (c: Car) => {
               'justify-center'
             ]"
           >
-            <h2 class="text-secondary">Visi</h2>
+            <h2 class="text-tertiary">Visi</h2>
             <p>
               Menjadi perusahaan transportasi, nasional handal & terpercaya,
               dengan performa Cekatan, Dinamis, Penuh motivasi
@@ -119,7 +119,7 @@ const viewCar = (c: Car) => {
               'justify-center'
             ]"
           >
-            <h2 class="text-secondary">Misi</h2>
+            <h2 class="text-tertiary">Misi</h2>
             <p>
               Misi Unit kendaraan terbaik dengan perawatan terjamin dan
               pelayanan prima pada konsumen
