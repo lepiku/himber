@@ -1,52 +1,11 @@
 import { md3 } from 'vuetify/blueprints'
 
-import materialTheme from './material-theme.json'
-
-const lightTheme = materialTheme.schemes.light
-const darkTheme = materialTheme.schemes.dark
-
-const getColors = (scheme: typeof lightTheme) => ({
-  primary: scheme.primary,
-  'on-primary': scheme.onPrimary,
-  'primary-container': scheme.primaryContainer,
-  'on-primary-container': scheme.onPrimaryContainer,
-  secondary: scheme.secondary,
-  'on-secondary': scheme.onSecondary,
-  tertiary: scheme.tertiary,
-  'on-tertiary': scheme.onTertiary,
-  success: scheme.primary,
-  'on-success': scheme.onPrimary,
-  error: scheme.error,
-  'on-error': scheme.onError,
-  background: scheme.surfaceContainer,
-  'on-background': scheme.onBackground,
-  surface: scheme.surface,
-  'on-surface': scheme.onSurface,
-  'surface-variant': scheme.surfaceVariant,
-  'on-surface-variant': scheme.onSurfaceVariant,
-  'surface-container': scheme.surfaceContainer,
-  'on-surface-container': scheme.onSurface,
-  'error-container': scheme.errorContainer,
-  'on-error-container': scheme.onErrorContainer,
-  'inverse-surface': scheme.inverseSurface,
-  'on-inverse-surface': scheme.inverseOnSurface,
-})
+import { darkTheme, getThemeColors, lightTheme } from './theme'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    'vuetify-nuxt-module',
-    [
-      '@nuxtjs/google-fonts',
-      {
-        families: {
-          Ephesis: true,
-        },
-      },
-    ],
-    '@nuxt/image',
-  ],
+  modules: ['vuetify-nuxt-module', '@nuxtjs/google-fonts', '@nuxt/image'],
   ssr: true,
   routeRules: {
     '/': { prerender: true },
@@ -57,18 +16,9 @@ export default defineNuxtConfig({
     vuetifyOptions: {
       blueprint: md3,
       theme: {
-        defaultTheme: 'light',
         themes: {
-          light: {
-            // colors: {
-            //   primary: colors.indigo.darken1,
-            //   'on-primary': '#fff',
-            //   secondary: colors.orange.darken1,
-            //   'on-secondary': '#fff'
-            // }
-            colors: getColors(lightTheme),
-          },
-          dark: { colors: getColors(darkTheme) },
+          light: { colors: getThemeColors(lightTheme) },
+          dark: { colors: getThemeColors(darkTheme) },
         },
       },
       defaults: {
@@ -80,6 +30,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
+      Ephesis: true,
       Roboto: [400, 700],
     },
   },
