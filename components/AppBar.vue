@@ -35,7 +35,7 @@ const drawer = ref(false)
       </div>
       <VSpacer />
       <VBtn color="tertiary" variant="elevated" class="me-4 font-weight-bold">
-        Book Now
+        Mulai Sewa
       </VBtn>
     </div>
   </VAppBar>
