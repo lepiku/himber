@@ -10,6 +10,20 @@ export const website = {
   },
 }
 
+export const sectionAboutUs = {
+  title: 'Tentang Kami',
+  header: 'Mengapa Sewa Doang?',
+  text: 'Kami hadir sebagai solusi transportasi dan penyewaan alat berat sejak \
+    2012. Berlokasi di Tarumajaya, Kab. Bekasi.',
+  items: [
+    'Layanan Terbaik',
+    'Unit Berkualitas',
+    'Nyaman dan Aman',
+    'Pemesanan Cepat',
+  ],
+  buttonMore: 'Pelajari Lebih Lanjut',
+}
+
 export const aboutUs = [
   'Perkembangan dan persaingan dunia bisnis yang makin pesat, menjadikan para \
   pelaku bisnis diharuskan memiliki mobilitas yang makin pesat, tidak hanya \
