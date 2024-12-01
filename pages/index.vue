@@ -1,6 +1,7 @@
 <template>
   <VMain>
-    <LandingCover />
-    <MainSection />
+    <SectionCover />
+    <SectionMain />
+    <SectionAboutUs />
   </VMain>
 </template>
