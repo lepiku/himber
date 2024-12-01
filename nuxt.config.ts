@@ -70,8 +70,13 @@ export default defineNuxtConfig({
           },
           dark: { colors: getColors(darkTheme) }
         }
+      },
+      defaults: {
+        VCard: {
+          elevation: 0
+        }
       }
-    }
+    },
   },
   googleFonts: {
     families: {

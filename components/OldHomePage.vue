@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { type Car, cars } from '~/data'
-
-const car = ref<Car | null>(null)
-const dialog = ref(false)
-
-const viewCar = (c: Car) => {
-  car.value = c
-  dialog.value = true
-}
+import { cars } from '~/data'
 </script>
 
 <template>
@@ -29,53 +21,11 @@ const viewCar = (c: Car) => {
       <VContainer class="py-6">
         <h2 class="text-center mb-2">Unit Mobil Kami</h2>
         <div class="d-flex flex-wrap justify-center">
-          <div
+          <CarCard
             v-for="(car, idx) in cars"
             :key="idx"
-            class="car-card ma-3 border-shadow"
-          >
-            <VDialog width="auto">
-              <template #activator="{ props }">
-                <div
-                  v-bind="props"
-                  :class="[
-                    'card-content',
-                    'd-flex',
-                    'flex-column',
-                    'align-center',
-                    'rounded-xl',
-                    'pa-4',
-                    'pb-6'
-                  ]"
-                  @click="viewCar(car)"
-                  v-ripple="{ class: 'text-primary' }"
-                >
-                  <NuxtImg
-                    :src="car.img"
-                    class="card-img"
-                    quality="20"
-                    sizes="80vw xs:300"
-                  />
-                  <h4 class="text-center text-black">{{ car.name }}</h4>
-                  <p>Rp {{ car.price.toLocaleString('id') }} / hari</p>
-                </div>
-              </template>
-
-              <template #default="{ isActive }">
-                <CarDetailCard :car="car" @close="isActive.value = false" />
-              </template>
-            </VDialog>
-
-            <div class="card-buttons px-4 d-flex justify-center rounded-pill">
-              <VBtn
-                color="tertiary"
-                class="font-weight-bold rounded-pill"
-                :href="generateWhatsappLink(car.name)"
-              >
-                Sewa Sekarang
-              </VBtn>
-            </div>
-          </div>
+            :car="car"
+          />
         </div>
       </VContainer>
     </div>
