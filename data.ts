@@ -6,8 +6,8 @@ export const website = {
     address: `
       Ruko ARALIA Blok HY 36 No. 37 Harapan Indah 2, Pusaka Rakyat, Taruma Jaya,
       Kab. Bekasi, Jawa Barat
-    `
-  }
+    `,
+  },
 }
 
 export const aboutUs = [
@@ -34,7 +34,7 @@ export const aboutUs = [
 
   'Kami menyediakan jasa transportasi dengan harga terbaik untuk sewa jangka \
   pendek maupun jangka panjang. dan kami siap tumbuh berkembang bersama anda. \
-'
+',
 ]
 
 export type Car = {
@@ -53,23 +53,23 @@ export const cars: Car[] = [
     photos: [
       {
         title: 'Depan',
-        img: '/images/car-photo/toyota-zenix-2023-front.jpg'
+        img: '/images/car-photo/toyota-zenix-2023-front.jpg',
       },
       {
         title: 'Kiri',
-        img: '/images/car-photo/toyota-zenix-2023-left.jpg'
+        img: '/images/car-photo/toyota-zenix-2023-left.jpg',
       },
       {
         title: 'Kanan',
-        img: '/images/car-photo/toyota-zenix-2023-right.jpg'
-      }
+        img: '/images/car-photo/toyota-zenix-2023-right.jpg',
+      },
     ],
     desc: [
       ['Model', 'Toyota Kijang Innova Zenix (2023)'],
       ['Warna', 'Hitam'],
       ['Mesin', 'Bensin (Pertalite)'],
-      ['Penumpang', '2 Depan, 2 Tengah, 3 Belakang']
-    ]
+      ['Penumpang', '2 Depan, 2 Tengah, 3 Belakang'],
+    ],
   },
   {
     name: 'Toyota Veloz (2023)',
@@ -78,19 +78,19 @@ export const cars: Car[] = [
     photos: [
       {
         title: 'Depan',
-        img: '/images/car-photo/toyota-veloz-2023-front.jpg'
+        img: '/images/car-photo/toyota-veloz-2023-front.jpg',
       },
       {
         title: 'Kanan',
-        img: '/images/car-photo/toyota-veloz-2023-right.jpg'
-      }
+        img: '/images/car-photo/toyota-veloz-2023-right.jpg',
+      },
     ],
     desc: [
       ['Model', 'Toyota Veloz (2023)'],
       ['Warna', 'Putih'],
       ['Mesin', 'Bensin (Pertalite)'],
-      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang']
-    ]
+      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang'],
+    ],
   },
   {
     name: 'Toyota Hilux (2023)',
@@ -99,15 +99,15 @@ export const cars: Car[] = [
     photos: [
       {
         title: 'Depan Kiri',
-        img: '/images/car-photo/toyota-hilux-2023-frontleft.jpg'
-      }
+        img: '/images/car-photo/toyota-hilux-2023-frontleft.jpg',
+      },
     ],
     desc: [
       ['Model', 'Toyota Hilux (2023)'],
       ['Warna', 'Silver'],
       ['Mesin', 'Bensin (Pertalite)'],
-      ['Penumpang', '2 Depan, 3 Belakang']
-    ]
+      ['Penumpang', '2 Depan, 3 Belakang'],
+    ],
   },
   {
     name: 'Mitsubishi Pajero Sport (2018)',
@@ -116,23 +116,23 @@ export const cars: Car[] = [
     photos: [
       {
         title: 'Depan',
-        img: '/images/car-photo/mitsubishi-pajero-2018-front.jpg'
+        img: '/images/car-photo/mitsubishi-pajero-2018-front.jpg',
       },
       {
         title: 'Kiri',
-        img: '/images/car-photo/mitsubishi-pajero-2018-left.jpg'
+        img: '/images/car-photo/mitsubishi-pajero-2018-left.jpg',
       },
       {
         title: 'Belakang',
-        img: '/images/car-photo/mitsubishi-pajero-2018-back.jpg'
-      }
+        img: '/images/car-photo/mitsubishi-pajero-2018-back.jpg',
+      },
     ],
     desc: [
       ['Model', 'Mitsubishi Pajero Sport (2018)'],
       ['Warna', 'Putih'],
       ['Mesin', '4WD Diesel (Dex / Dexlite)'],
-      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang']
-    ]
+      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang'],
+    ],
   },
   {
     name: 'Jeep Rubicon',
@@ -141,19 +141,19 @@ export const cars: Car[] = [
     photos: [
       {
         title: 'Depan',
-        img: '/images/car-photo/jeep-rubicon-front.jpg'
+        img: '/images/car-photo/jeep-rubicon-front.jpg',
       },
       {
         title: 'Kiri',
-        img: '/images/car-photo/jeep-rubicon-left.jpg'
-      }
+        img: '/images/car-photo/jeep-rubicon-left.jpg',
+      },
     ],
     desc: [
       ['Model', 'Jeep Rubicon'],
       ['Warna', 'Silver'],
       ['Mesin', 'Bensin (Pertalite)'],
-      ['Penumpang', '2 Depan, 3 Tengah']
-    ]
+      ['Penumpang', '2 Depan, 3 Tengah'],
+    ],
   },
   {
     name: 'Honda CRV',
@@ -162,18 +162,18 @@ export const cars: Car[] = [
     photos: [
       {
         title: 'Depan',
-        img: '/images/car-photo/honda-crv-front.jpg'
+        img: '/images/car-photo/honda-crv-front.jpg',
       },
       {
         title: 'Kanan',
-        img: '/images/car-photo/honda-crv-right.jpg'
-      }
+        img: '/images/car-photo/honda-crv-right.jpg',
+      },
     ],
     desc: [
       ['Model', 'Honda CRV Black Edition'],
       ['Warna', 'Hitam'],
       ['Mesin', 'Bensin (Pertamax)'],
-      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang']
-    ]
-  }
+      ['Penumpang', '2 Depan, 3 Tengah, 3 Belakang'],
+    ],
+  },
 ]

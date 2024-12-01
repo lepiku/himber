@@ -29,7 +29,7 @@ const getColors = (scheme: typeof lightTheme) => ({
   'error-container': scheme.errorContainer,
   'on-error-container': scheme.onErrorContainer,
   'inverse-surface': scheme.inverseSurface,
-  'on-inverse-surface': scheme.inverseOnSurface
+  'on-inverse-surface': scheme.inverseOnSurface,
 })
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -41,17 +41,17 @@ export default defineNuxtConfig({
       '@nuxtjs/google-fonts',
       {
         families: {
-          Ephesis: true
-        }
-      }
+          Ephesis: true,
+        },
+      },
     ],
-    '@nuxt/image'
+    '@nuxt/image',
   ],
   ssr: true,
   routeRules: {
     '/': { prerender: true },
     '/old': { prerender: true },
-    '/tentang-kami': { prerender: true }
+    '/tentang-kami': { prerender: true },
   },
   vuetify: {
     vuetifyOptions: {
@@ -66,22 +66,22 @@ export default defineNuxtConfig({
             //   secondary: colors.orange.darken1,
             //   'on-secondary': '#fff'
             // }
-            colors: getColors(lightTheme)
+            colors: getColors(lightTheme),
           },
-          dark: { colors: getColors(darkTheme) }
-        }
+          dark: { colors: getColors(darkTheme) },
+        },
       },
       defaults: {
         VCard: {
-          elevation: 0
-        }
-      }
+          elevation: 0,
+        },
+      },
     },
   },
   googleFonts: {
     families: {
-      Roboto: [400, 700]
-    }
+      Roboto: [400, 700],
+    },
   },
   image: {
     screens: {
@@ -92,9 +92,9 @@ export default defineNuxtConfig({
       md: 960,
       lg: 1280,
       xl: 1920,
-      xxl: 2560
-    }
+      xxl: 2560,
+    },
   },
 
-  compatibilityDate: '2024-11-27'
+  compatibilityDate: '2024-11-27',
 })

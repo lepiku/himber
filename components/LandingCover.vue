@@ -21,7 +21,9 @@ const bb = themeColors.palettes.primary[5]
             profesional. Cocok untuk perjalanan bisnis, liburan, atau kebutuhan
             harian.
           </p>
-          <VBtn color="primary-container" class="mt-2">Pelajari lebih lanjut</VBtn>
+          <VBtn color="primary-container" class="mt-2"
+            >Pelajari lebih lanjut</VBtn
+          >
         </div>
       </VContainer>
     </div>

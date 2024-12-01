@@ -21,11 +21,7 @@ import { cars } from '~/data'
       <VContainer class="py-6">
         <h2 class="text-center mb-2">Unit Mobil Kami</h2>
         <div class="d-flex flex-wrap justify-center">
-          <CarCard
-            v-for="(car, idx) in cars"
-            :key="idx"
-            :car="car"
-          />
+          <CarCard v-for="(car, idx) in cars" :key="idx" :car="car" />
         </div>
       </VContainer>
     </div>
@@ -45,7 +41,7 @@ import { cars } from '~/data'
               'text-center',
               'd-flex',
               'flex-column',
-              'justify-center'
+              'justify-center',
             ]"
           >
             <h2 class="text-tertiary">Visi</h2>
@@ -66,7 +62,7 @@ import { cars } from '~/data'
               'text-center',
               'd-flex',
               'flex-column',
-              'justify-center'
+              'justify-center',
             ]"
           >
             <h2 class="text-tertiary">Misi</h2>

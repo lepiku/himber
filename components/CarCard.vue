@@ -18,7 +18,7 @@ const dialog = ref(false)
             'align-center',
             'rounded-lg',
             'pa-4',
-            'pb-6'
+            'pb-6',
           ]"
           v-ripple="{ class: 'text-primary-container' }"
         >

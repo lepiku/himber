@@ -4,7 +4,7 @@ import { website } from '~/data'
 const navItems = [
   { text: 'Beranda', to: '/', icon: 'mdi-home' },
   { text: 'Armada Kami', to: '/old', icon: 'mdi-car' },
-  { text: 'Tentang Kami', to: '/tentang-kami', icon: 'mdi-information' }
+  { text: 'Tentang Kami', to: '/tentang-kami', icon: 'mdi-information' },
   // { text: 'Kontak', to: '/kontak', icon: 'mdi-phone' }
 ]
 
