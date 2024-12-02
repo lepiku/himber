@@ -1,12 +1,35 @@
 import { md3 } from 'vuetify/blueprints'
 
+import { website } from './data'
 import { darkTheme, getThemeColors, lightTheme } from './theme'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  modules: ['vuetify-nuxt-module', '@nuxtjs/google-fonts', '@nuxt/image'],
+  modules: [
+    'vuetify-nuxt-module',
+    '@nuxt/image',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/seo',
+  ],
+
   ssr: true,
+  devtools: { enabled: true },
+
+  app: {
+    head: {
+      titleTemplate: '%s %separator %websiteName',
+      templateParams: {
+        separator: '-',
+        websiteName: website.name,
+      },
+    },
+  },
+  seo: {
+    meta: {
+      ogLocale: 'id_ID',
+    },
+  },
+
   routeRules: {
     '/': { prerender: true },
     '/old': { prerender: true },

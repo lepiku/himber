@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "sewa-doang",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,6 +13,7 @@
   "devDependencies": {
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/seo": "^2.0.2",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "nuxt": "^3.14.0",
     "prettier": "^3.4.1",
