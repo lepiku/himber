@@ -2,15 +2,15 @@
 const img = useImage()
 
 const backgroundStyles = computed(() => {
-  const imgUrl = img('/images/landing-cover.jpg')
+  const imgUrl = img('/images/bg-cover.jpg')
   return { backgroundImage: `url('${imgUrl}')` }
 })
 
-const bb = appTheme.palettes.primary[5]
+const darkBg = appTheme.palettes.primary[5]
 </script>
 
 <template>
-  <div class="bg-inverse-surface">
+  <div class="bg-primary">
     <div class="landing-cover" :style="backgroundStyles">
       <VContainer class="py-8">
         <div class="text-wrapper">
@@ -40,7 +40,7 @@ const bb = appTheme.palettes.primary[5]
   background-position: center
 
   .v-container
-    background-image: linear-gradient(to right, v-bind(bb),transparent)
+    background-image: linear-gradient(to right, v-bind(darkBg), transparent)
 
   .v-container .text-wrapper
     max-width: 400px

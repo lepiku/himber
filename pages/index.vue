@@ -9,5 +9,6 @@ useSeoMeta({
     <SectionCover />
     <SectionMain />
     <SectionAboutUs />
+    <SectionFaq />
   </VMain>
 </template>

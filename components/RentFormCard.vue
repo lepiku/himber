@@ -18,7 +18,12 @@ const fields: VTextField['$props'][] = textFields.map((c) => ({
   <VCard color="primary">
     <VCardText class="d-flex align-center pa-6">
       <VTextField v-for="f in fields" v-bind="f" />
-      <VBtn color="tertiary" size="x-large" prepend-icon="mdi mdi-car-key">
+      <VBtn
+        color="tertiary"
+        size="x-large"
+        prepend-icon="mdi mdi-car-key"
+        class="font-weight-bold"
+      >
         Pesan Sekarang
       </VBtn>
     </VCardText>

@@ -23,9 +23,9 @@ export const sectionAboutUs = {
 }
 
 export const sectionFaq = {
-  title: 'Tentang Kami',
-  header: 'Mengapa Sewa Doang?',
-  text: 'Apa saja yang sering ditanyakan atau kontak kami melali WhatsApp dan media sosial kami.',
+  title: 'FAQ',
+  header: 'Frequently Asked Questions',
+  text: 'Apa saja yang sering ditanyakan melalui WhatsApp dan media sosial kami.',
   buttonMore: 'Selengkapnya',
   questions: [
     {

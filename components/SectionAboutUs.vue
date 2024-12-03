@@ -22,7 +22,7 @@ import { sectionAboutUs as content } from '~/content'
             <p class="text-h6 ms-2">{{ i }}</p>
           </div>
         </div>
-        <VBtn prepend-icon="mdi mdi-chevron-right" class="mt-3">
+        <VBtn append-icon="mdi mdi-chevron-right" class="mt-3">
           Pelajari Lebih Lanjut
         </VBtn>
       </div>
