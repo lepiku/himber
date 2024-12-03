@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Car, cars } from '~/data'
+import { type Car, cars } from '~/content'
 
 const groupedCars = computed(() => {
   const result: Car[][] = []

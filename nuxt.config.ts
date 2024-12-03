@@ -1,6 +1,6 @@
 import { md3 } from 'vuetify/blueprints'
 
-import { website } from './data'
+import { website } from './content'
 import { darkTheme, getThemeColors, lightTheme } from './theme'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config

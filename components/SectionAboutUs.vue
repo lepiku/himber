@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { sectionAboutUs as content } from '~/data'
+import { sectionAboutUs as content } from '~/content'
 </script>
 <template>
   <div class="bg-primary-container">
@@ -22,11 +22,14 @@ import { sectionAboutUs as content } from '~/data'
             <p class="text-h6 ms-2">{{ i }}</p>
           </div>
         </div>
+        <VBtn prepend-icon="mdi mdi-chevron-right" class="mt-3">
+          Pelajari Lebih Lanjut
+        </VBtn>
       </div>
       <NuxtImg
         src="/images/car-unit/jeep-rubicon.png"
         quality="40"
-        sizes="600"
+        width="600"
         class="mb-n6"
       />
     </VContainer>

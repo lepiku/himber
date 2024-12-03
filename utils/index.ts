@@ -1,4 +1,4 @@
-import { website } from '~/data'
+import { website } from '~/content'
 
 export { appTheme } from '~/theme'
 

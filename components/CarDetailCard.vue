@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Car } from '~/data'
+import type { Car } from '~/content'
 
 defineProps<{ car: Car; onClose: () => void }>()
 

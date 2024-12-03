@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { website } from '~/data'
+import { website } from '~/content'
 
 const navItems = [
   { text: 'Beranda', to: '/', icon: 'mdi-home' },

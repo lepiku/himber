@@ -12,8 +12,7 @@ export const website = {
 export const sectionAboutUs = {
   title: 'Tentang Kami',
   header: 'Mengapa Sewa Doang?',
-  text: 'Kami hadir sebagai solusi transportasi dan penyewaan alat berat sejak \
-    2012. Berlokasi di Tarumajaya, Kab. Bekasi.',
+  text: 'Kami hadir sebagai solusi transportasi dan penyewaan alat berat sejak 2012. Berlokasi di Tarumajaya, Kab. Bekasi.',
   items: [
     'Layanan Terbaik',
     'Unit Berkualitas',
@@ -21,6 +20,29 @@ export const sectionAboutUs = {
     'Pemesanan Cepat',
   ],
   buttonMore: 'Pelajari Lebih Lanjut',
+}
+
+export const sectionFaq = {
+  title: 'Tentang Kami',
+  header: 'Mengapa Sewa Doang?',
+  text: 'Apa saja yang sering ditanyakan atau kontak kami melali WhatsApp dan media sosial kami.',
+  buttonMore: 'Selengkapnya',
+  questions: [
+    {
+      question: 'Ada layanan apa saja?',
+      answer: 'Sewa mobil penumpang, mobil barang, dan lainnya.',
+    },
+    {
+      question: 'Sewa Doang tersedia di lokasi mana saja?',
+      answer:
+        'Iure consequatur ut et enim id doloribus aut. Qui perspiciatis dolorem omnis quis assumenda illum autem. Iste vero dolor assumenda. Esse tempora hic magni. Nulla voluptatem.',
+    },
+    {
+      question: 'Ada layanan apa saja?',
+      answer:
+        'Sed iure et cupiditate. Cupiditate qui corrupti enim quia eligendi natus non. Sit numquam incidunt aut ipsa minus assumenda dolorem.',
+    },
+  ],
 }
 
 export const aboutUs = [
