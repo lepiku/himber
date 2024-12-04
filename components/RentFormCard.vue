@@ -21,7 +21,7 @@ const fields: VTextField['$props'][] = textFields.map((c) => ({
       <VBtn
         color="tertiary"
         size="x-large"
-        prepend-icon="mdi mdi-car-key"
+        prepend-icon="mdi-car-key"
         class="font-weight-bold"
       >
         Pesan Sekarang

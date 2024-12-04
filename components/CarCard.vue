@@ -48,7 +48,7 @@ const dialog = ref(false)
         @click="dialog = true"
         color="secondary"
         class="ms-2"
-        prepend-icon="mdi mdi-eye"
+        prepend-icon="mdi-eye"
       >
         Detail
       </VBtn>

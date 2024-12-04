@@ -26,7 +26,7 @@ const darkBg = appTheme.palettes.primary[5]
             <p class="text-h6">{{ content.text }}</p>
             <VBtn
               color="primary-container"
-              append-icon="mdi mdi-chevron-right"
+              append-icon="mdi-chevron-right"
               class="mt-2"
             >
               {{ content.buttonMore }}

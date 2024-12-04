@@ -4,7 +4,7 @@
     <div class="d-flex mb-3 align-center">
       <p class="text-h4 font-weight-bold text-primary">Mobil Unggulan Kami</p>
       <VSpacer />
-      <VBtn append-icon="mdi mdi-chevron-right">Lihat Lainnya</VBtn>
+      <VBtn append-icon="mdi-chevron-right">Lihat Lainnya</VBtn>
     </div>
     <CarListHorizontal class="mb-6" />
     <RentFormCard />

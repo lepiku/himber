@@ -23,7 +23,7 @@ const darkBg = appTheme.palettes.primary[5]
           </p>
           <VBtn
             color="primary-container"
-            append-icon="mdi mdi-chevron-right"
+            append-icon="mdi-chevron-right"
             class="mt-2"
           >
             Pelajari lebih lanjut

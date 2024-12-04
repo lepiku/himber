@@ -18,11 +18,11 @@ import { sectionAboutUs as content } from '~/content'
             :key="idx"
             class="d-flex align-center"
           >
-            <VIcon icon="mdi mdi-check-circle" color="tertiary" />
+            <VIcon icon="mdi-check-circle" color="tertiary" />
             <p class="text-h6 ms-2">{{ i }}</p>
           </div>
         </div>
-        <VBtn append-icon="mdi mdi-chevron-right" class="mt-3">
+        <VBtn append-icon="mdi-chevron-right" class="mt-3">
           Pelajari Lebih Lanjut
         </VBtn>
       </div>
