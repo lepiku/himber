@@ -6,31 +6,37 @@
   </VApp>
 </template>
 
-<style>
-body {
-  font-family: 'Roboto', sans-serif;
-}
+<style lang="sass">
+body
+  font-family: 'Roboto', sans-serif
 
-.v-container {
-  max-width: 1200px !important;
-}
-p {
-  margin: 6px 0;
-}
+.v-container
+  max-width: 1200px !important
 
-.text-ephesis {
-  font-family: 'Ephesis';
-  font-weight: 400;
-  font-style: normal;
-}
+p
+  margin: 4px 0
 
-a.nostyle:link {
-  text-decoration: inherit;
-  color: inherit;
-}
 
-a.nostyle:visited {
-  text-decoration: inherit;
-  color: inherit;
-}
+.text-spacing-normal
+  letter-spacing: normal
+
+
+.text-h4,
+.text-h5
+  font-weight: bold
+
+.text-ephesis
+  font-family: 'Ephesis'
+  font-weight: 400
+  font-style: normal
+
+
+a.nostyle:link
+  text-decoration: inherit
+  color: inherit
+
+
+a.nostyle:visited
+  text-decoration: inherit
+  color: inherit
 </style>

@@ -1,12 +1,23 @@
 export const website = {
   name: 'Sewa Doang',
+  description:
+    'Sewa Doang berawal dari usaha perorangan, kini CV Maju Bersama Rental menyediakan berbagai layanan.',
+  contactUs: 'Hubungi Kami',
   contact: {
+    name: 'Herni',
     phone: '082112593113',
+    phoneText: '0821-1259-3113 (Herni)',
     email: 'herni.sasadara@gmail.com',
     address:
-      'Ruko ARALIA Blok HY 36 No. 37 Harapan Indah 2, Pusaka Rakyat, Taruma ' +
-      'Jaya, Kab. Bekasi, Jawa Barat',
+      'Ruko ARALIA Blok HY 36 No. 37 Harapan Indah 2, Pusaka Rakyat, Taruma Jaya, Kab. Bekasi, Jawa Barat',
   },
+  socialMediaLinks: [
+    { title: 'Instagram', icon: 'mdi-instagram', href: '/' },
+    { title: 'Facebook', icon: 'mdi-facebook', href: '/' },
+    { title: 'WhatsApp', icon: 'mdi-whatsapp', href: '/' },
+  ],
+  services: 'Layanan',
+  location: 'Lokasi',
 }
 
 export const sectionAboutUs = {
