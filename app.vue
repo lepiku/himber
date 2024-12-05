@@ -1,7 +1,9 @@
 <template>
   <VApp>
     <AppBar />
-    <NuxtPage />
+    <VMain class="pt-16">
+      <NuxtPage />
+    </VMain>
     <AppFooter />
   </VApp>
 </template>

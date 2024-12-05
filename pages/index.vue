@@ -5,10 +5,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <VMain>
-    <SectionCover />
-    <SectionMain />
-    <SectionAboutUs />
-    <SectionFaq />
-  </VMain>
+  <SectionCover />
+  <SectionMain />
+  <SectionAboutUs />
+  <SectionFaq />
 </template>
