@@ -12,15 +12,19 @@ const drawer = ref(false)
 </script>
 
 <template>
-  <VAppBar color="surface-variant">
+  <VAppBar color="primary-container">
+    <template #prepend>
+      <VAppBarNavIcon class="d-sm-none" @click="drawer = !drawer" />
+    </template>
+
     <div class="d-flex w-100">
       <NuxtImg src="/images/logo.png" width="100" height="38" class="ms-4" />
       <VAppBarTitle class="text-ephesis d-flex align-center ps-4">
-        <RouterLink to="/" class="nostyle">
+        <RouterLink to="/" class="nostyle d-none d-md-block">
           {{ website.name }}
         </RouterLink>
       </VAppBarTitle>
-      <div class="">
+      <div class="d-none d-sm-block">
         <VBtn
           v-for="(item, i) in navItems"
           :key="i"
@@ -33,7 +37,7 @@ const drawer = ref(false)
           {{ item.text }}
         </VBtn>
       </div>
-      <VSpacer />
+      <VSpacer class="d-none d-sm-block" />
       <VBtn color="tertiary" variant="elevated" class="me-4 font-weight-bold">
         Mulai Sewa
       </VBtn>
@@ -44,12 +48,9 @@ const drawer = ref(false)
     v-model="drawer"
     location="top"
     temporary
-    style="max-height: 160px"
+    color="primary-container"
   >
-    <VList>
-      <VListItem>
-        <VListItemTitle>{{ website.name }}</VListItemTitle>
-      </VListItem>
+    <VList class="d-sm-none">
       <VListItem
         v-for="(item, i) in navItems"
         :key="i"
