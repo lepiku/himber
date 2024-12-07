@@ -14,6 +14,7 @@ export default defineNuxtConfig({
 
   ssr: true,
   devtools: { enabled: true },
+  devServer: { port: 8000 },
 
   app: {
     head: {
@@ -41,7 +42,7 @@ export default defineNuxtConfig({
       theme: {
         themes: {
           light: { colors: getThemeColors(lightTheme) },
-          dark: { colors: getThemeColors(darkTheme) },
+          // dark: { colors: getThemeColors(darkTheme) },
         },
       },
       defaults: {

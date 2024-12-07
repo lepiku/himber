@@ -5,13 +5,11 @@ const backgroundStyles = computed(() => {
   const imgUrl = img('/images/bg-cover.jpg')
   return { backgroundImage: `url('${imgUrl}')` }
 })
-
-const darkBg = appTheme.palettes.primary[5]
 </script>
 
 <template>
   <div class="bg-primary d-flex">
-    <div class="landing-cover-start"></div>
+    <div class="landing-cover-start bg-primary-5"></div>
     <div class="landing-cover flex-fill" :style="backgroundStyles">
       <VContainer class="py-8 ms-0">
         <div class="text-wrapper">
@@ -37,7 +35,6 @@ const darkBg = appTheme.palettes.primary[5]
 
 <style lang="sass" scoped>
 .landing-cover-start
-  background: v-bind(darkBg)
   width: calc((100vw - 1200px)/2)
 
 .landing-cover
@@ -45,7 +42,7 @@ const darkBg = appTheme.palettes.primary[5]
   background-position: center
 
   .v-container
-    background-image: linear-gradient(to right, v-bind(darkBg), transparent)
+    background-image: linear-gradient(to right, rgb(var(--v-theme-primary-5)), transparent)
 
   .v-container .text-wrapper
     max-width: 450px

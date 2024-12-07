@@ -33,6 +33,10 @@ export const getThemeColors = (scheme: typeof lightTheme) => ({
   'on-surface-container': scheme.onSurface,
   'inverse-surface': scheme.inverseSurface,
   'on-inverse-surface': scheme.inverseOnSurface,
+
+  // palettes
+  'primary-5': materialTheme.palettes.primary[5],
+  'primary-20': materialTheme.palettes.primary[20],
 })
 
 export const appTheme = materialTheme

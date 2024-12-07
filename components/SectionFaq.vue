@@ -7,12 +7,11 @@ const backgroundStyles = computed(() => {
   const imgUrl = img('/images/bg-faq.jpg')
   return { backgroundImage: `url('${imgUrl}')` }
 })
-const darkBg = appTheme.palettes.primary[5]
 </script>
 
 <template>
   <div id="faq" :style="backgroundStyles">
-    <div class="faq-bg-overlay"></div>
+    <div class="faq-bg-overlay bg-primary-5"></div>
     <VContainer class="d-flex align-center py-8 bg-primary">
       <VRow class="align-center">
         <VCol :cols="5">
@@ -64,7 +63,6 @@ const darkBg = appTheme.palettes.primary[5]
     position: absolute
     width: 100%
     height: 100%
-    background-color: v-bind(darkBg)
     opacity: .7
 
   > .v-container
