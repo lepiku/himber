@@ -27,6 +27,7 @@ const backgroundStyles = computed(() => {
               color="primary-container"
               append-icon="mdi-chevron-right"
               class="mt-2"
+              :to="{ name: 'about-us', hash: '#faq' }"
             >
               {{ content.buttonMore }}
             </VBtn>
