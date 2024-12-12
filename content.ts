@@ -56,7 +56,7 @@ export const sectionFaq = {
   ],
 }
 
-export const aboutUsText = [
+export const historyTexts = [
   'Perkembangan dan persaingan dunia bisnis yang makin pesat, menjadikan para \
   pelaku bisnis diharuskan memiliki mobilitas yang makin pesat, tidak hanya \
   tinggi namun juga efisien sekaligus juga efektif, sehingga kebutuhan akan \
