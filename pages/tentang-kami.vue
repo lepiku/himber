@@ -1,12 +1,69 @@
 <script setup lang="ts">
-import { aboutUs } from '~/content'
+import { aboutUsText, aboutUs as content } from '~/content'
 </script>
 
 <template>
-  <div id="tentang-kami">
-    <VContainer class="py-6">
-      <h2 class="text-center text-secondary">Tentang Kami</h2>
-      <p v-for="(text, i) in aboutUs" :key="i">{{ text }}</p>
-    </VContainer>
-  </div>
+  <VContainer class="pb-0">
+    <p class="text-h4 text-sm-h3 text-center">Tentang Kami</p>
+  </VContainer>
+
+  <VContainer id="about-us">
+    <p class="text-h5 text-sm-h4 text-center text-primary">
+      Visi dan Misi Kami
+    </p>
+    <VRow class="mt-4">
+      <VCol>
+        <VExpansionPanels>
+          <VExpansionPanel class="rounded-xl">
+            <VExpansionPanelTitle
+              color="primary-container"
+              class="font-weight-bold text-center rounded-xl"
+            >
+              <div class="w-100 text-h5">
+                {{ content.visionTitle }}
+              </div>
+            </VExpansionPanelTitle>
+            <VExpansionPanelText class="text-body-1">
+              {{ content.vision }}
+            </VExpansionPanelText>
+          </VExpansionPanel>
+        </VExpansionPanels>
+      </VCol>
+      <VCol>
+        <VExpansionPanels>
+          <VExpansionPanel class="rounded-xl">
+            <VExpansionPanelTitle
+              color="primary-container"
+              class="font-weight-bold text-center rounded-xl"
+            >
+              <div class="w-100 text-h5">
+                {{ content.missionTitle }}
+              </div>
+            </VExpansionPanelTitle>
+            <VExpansionPanelText>
+              <VTable>
+                <tbody>
+                  <tr v-for="(m, idx) in content.missions" :key="idx">
+                    <td class="pa-0 border-0 pt-2" style="vertical-align: top">
+                      <VBadge :content="idx + 1" inline color="tertiary" />
+                    </td>
+                    <td class="flex-fill border-0 text-body-1">{{ m }}</td>
+                  </tr>
+                </tbody>
+              </VTable>
+            </VExpansionPanelText>
+          </VExpansionPanel>
+        </VExpansionPanels>
+      </VCol>
+    </VRow>
+  </VContainer>
+
+  <VContainer id="history" class="py-6">
+    <p class="text-h5 text-sm-h4 text-center mb-4 text-primary">
+      Sejarah Sewa Doang
+    </p>
+    <p v-for="(text, i) in aboutUsText" :key="i" class="text-body-1 mb-4">
+      {{ text }}
+    </p>
+  </VContainer>
 </template>

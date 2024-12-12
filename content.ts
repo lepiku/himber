@@ -56,7 +56,7 @@ export const sectionFaq = {
   ],
 }
 
-export const aboutUs = [
+export const aboutUsText = [
   'Perkembangan dan persaingan dunia bisnis yang makin pesat, menjadikan para \
   pelaku bisnis diharuskan memiliki mobilitas yang makin pesat, tidak hanya \
   tinggi namun juga efisien sekaligus juga efektif, sehingga kebutuhan akan \
@@ -82,6 +82,18 @@ export const aboutUs = [
   pendek maupun jangka panjang. dan kami siap tumbuh berkembang bersama anda. \
 ',
 ]
+export const aboutUs = {
+  visionTitle: 'Visi',
+  vision:
+    'Menjadi perusahaan transportasi dan penyewaan alat berat terbaik yang mendukung kebutuhan bisnis dengan standar kualitas, kenyamanan, dan keamanan tinggi, serta terus berinovasi untuk menjawab tantangan dunia usaha yang semakin kompleks.',
+  missionTitle: 'Misi',
+  missions: [
+    'Menyediakan solusi transportasi dan penyewaan alat berat yang efisien, efektif, dan aman.',
+    'Memberikan layanan berkualitas tinggi dengan standar terbaik untuk mobil penumpang dan mobil barang.',
+    'Mendukung kebutuhan transportasi perusahaan dengan harga kompetitif untuk sewa jangka pendek maupun jangka panjang.',
+    'Berkomitmen untuk tumbuh dan berkembang bersama pelanggan melalui peningkatan kualitas layanan secara berkelanjutan.',
+  ],
+}
 
 export type Car = {
   name: string

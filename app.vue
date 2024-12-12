@@ -18,10 +18,9 @@ body
 p
   margin: 4px 0
 
-
-.text-spacing-normal
-  letter-spacing: normal
-
+.text-spacing-normal,
+.text-body-1
+  letter-spacing: normal !important
 
 .text-h4,
 .text-h5
