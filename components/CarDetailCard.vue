@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Car } from '~/data'
+import type { Car } from '~/content'
 
 defineProps<{ car: Car; onClose: () => void }>()
 
@@ -21,6 +21,7 @@ const selectedPhoto = ref(0)
           width="500"
           height="500"
           class="car-view rounded-lg"
+          style="object-fit: contain; background: black"
         />
       </div>
       <div class="d-flex overflow-x-auto mx-n1 mb-4">
@@ -49,7 +50,7 @@ const selectedPhoto = ref(0)
     </VCardText>
     <div class="floating-buttons">
       <VBtn
-        color="secondary"
+        color="tertiary"
         variant="elevated"
         class="font-weight-bold rounded-pill"
         :href="generateWhatsappLink(car.name)"

@@ -1,4 +1,6 @@
-import { website } from '@/data'
+import { website } from '~/content'
+
+export { appTheme } from '~/theme'
 
 export const generateWhatsappLink = (carName: string) =>
   'https://api.whatsapp.com/send' +
