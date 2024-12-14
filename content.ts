@@ -162,7 +162,7 @@ export const aboutUs = {
   ],
 
   moreQuestions: 'Masih Ada Pertanyaan?',
-  contactUs: 'Hubungi Kami',
+  contactUs: 'Kontak Kami',
 }
 
 export type Car = {

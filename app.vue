@@ -22,6 +22,7 @@ p
 .text-body-1
   letter-spacing: normal !important
 
+.text-h3,
 .text-h4,
 .text-h5
   font-weight: bold
