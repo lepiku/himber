@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Car } from '~/content'
+import { type Car, messageTemplate } from '~/content'
 
 defineProps<{ car: Car; onClose: () => void }>()
 
@@ -53,7 +53,8 @@ const selectedPhoto = ref(0)
         color="tertiary"
         variant="elevated"
         class="font-weight-bold rounded-pill"
-        :href="generateWhatsappLink(car.name)"
+        :href="whatsappLink(messageTemplate.car(car.name))"
+        targe="_blank"
       >
         Sewa Sekarang
       </VBtn>

@@ -30,6 +30,11 @@ export default defineNuxtConfig({
       ogLocale: 'id_ID',
     },
   },
+  linkChecker: {
+    skipInspections: [
+      'no-uppercase-chars'
+    ],
+  },
 
   routeRules: {
     '/': { prerender: true },

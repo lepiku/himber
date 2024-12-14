@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { aboutUs as content } from '~/content'
+import { aboutUs as content, messageTemplate } from '~/content'
 
 definePageMeta({
   name: 'about-us',
@@ -22,6 +22,8 @@ definePageMeta({
       :text="content.contactUs"
       class="font-weight-bold mt-4"
       size="large"
+      :href="whatsappLink(messageTemplate.contactUs())"
+      target="_blank"
     />
   </VContainer>
 </template>

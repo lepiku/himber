@@ -305,3 +305,15 @@ export const cars: Car[] = [
     ],
   },
 ]
+
+export const messageTemplate = {
+  navbar: () => 'Halo, Saya ingin menyewa mobil di SewaDoang, apakah bisa?',
+  form: (name: string, location: string, date: string) =>
+    'Halo, saya ingin menyewa mobil dengan identitas:\n' +
+    '\n' +
+    `Nama: ${name}\n` +
+    `Lokasi: ${location}\n` +
+    `Tanggal: ${date}`,
+  car: (car: string) => `Halo, saya ingin menyewa mobil ${car}`,
+  contactUs: () => 'Halo, Saya ingin menanyakan…',
+}

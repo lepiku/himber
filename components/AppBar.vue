@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { website } from '~/content'
+import { messageTemplate, website } from '~/content'
 
 const navItems = [
   { text: 'Beranda', to: '/', icon: 'mdi-home' },
@@ -38,7 +38,13 @@ const drawer = ref(false)
         </VBtn>
       </div>
       <VSpacer class="d-none d-sm-block" />
-      <VBtn color="tertiary" variant="elevated" class="me-4 font-weight-bold">
+      <VBtn
+        color="tertiary"
+        variant="elevated"
+        class="me-4 font-weight-bold"
+        :href="whatsappLink(messageTemplate.navbar())"
+        target="_blank"
+      >
         Mulai Sewa
       </VBtn>
     </div>

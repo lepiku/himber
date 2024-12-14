@@ -2,9 +2,9 @@ import { website } from '~/content'
 
 export { appTheme } from '~/theme'
 
-export const generateWhatsappLink = (carName: string) =>
-  'https://api.whatsapp.com/send' +
-  '?phone=62' +
-  website.contact.phone.slice(1) +
-  '&text=Halo%2C%20saya%20mau%20sewa%20mobil%20' +
-  carName.replaceAll(' ', '%20')
+export const whatsappLink = (text: string) =>
+  'https://api.whatsapp.com/send?' +
+  new URLSearchParams({
+    phone: '62' + website.contact.phone.slice(1),
+    text,
+  }).toString()

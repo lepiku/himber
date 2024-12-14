@@ -22,7 +22,11 @@ import { sectionAboutUs as content } from '~/content'
             <p class="ms-2">{{ i }}</p>
           </div>
         </div>
-        <VBtn append-icon="mdi-chevron-right" class="mt-3">
+        <VBtn
+          append-icon="mdi-chevron-right"
+          class="mt-3"
+          :to="{ name: 'about-us' }"
+        >
           Pelajari Lebih Lanjut
         </VBtn>
       </div>

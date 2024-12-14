@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Car } from '~/content'
+import { type Car, messageTemplate } from '~/content'
 
 defineProps<{ car: Car }>()
 
@@ -40,7 +40,8 @@ const dialog = ref(false)
       <VBtn
         color="tertiary"
         class="font-weight-bold rounded-pill"
-        :href="generateWhatsappLink(car.name)"
+        :href="whatsappLink(messageTemplate.car(car.name))"
+        target="_blank"
       >
         Sewa Sekarang
       </VBtn>
