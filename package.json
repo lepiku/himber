@@ -16,6 +16,7 @@
     "@nuxtjs/seo": "^2.0.2",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@vee-validate/yup": "^4.14.7",
+    "dayjs": "^1.11.13",
     "nuxt": "^3.14.0",
     "prettier": "^3.4.1",
     "sass": "^1.81.0",
@@ -26,6 +27,7 @@
     "vue-tsc": "^2.1.10",
     "vuetify": "^3.7.4",
     "vuetify-nuxt-module": "^0.18.3",
-    "yup": "^1.5.0"
+    "yup": "^1.5.0",
+    "yup-locales": "^1.2.28"
   }
 }
