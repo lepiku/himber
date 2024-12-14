@@ -15,7 +15,7 @@ import { aboutUs as content } from '~/content'
               color="primary-container"
               class="font-weight-bold text-center rounded-xl"
             >
-              <div class="w-100 text-h5">
+              <div class="w-100 text-h6">
                 {{ content.visionTitle }}
               </div>
             </VExpansionPanelTitle>
@@ -32,7 +32,7 @@ import { aboutUs as content } from '~/content'
               color="primary-container"
               class="font-weight-bold text-center rounded-xl"
             >
-              <div class="w-100 text-h5">
+              <div class="w-100 text-h6">
                 {{ content.missionTitle }}
               </div>
             </VExpansionPanelTitle>

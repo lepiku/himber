@@ -38,7 +38,7 @@ export const sectionFaq = {
   header: 'Frequently Asked Questions',
   text: 'Apa saja yang sering ditanyakan melalui WhatsApp dan media sosial kami.',
   buttonMore: 'Selengkapnya',
-  questions: [
+  summaryQuestions: [
     {
       question: 'Ada layanan apa saja?',
       answer: 'Sewa mobil penumpang, mobil barang, dan lainnya.',
@@ -52,6 +52,72 @@ export const sectionFaq = {
       question: 'Ada layanan apa saja?',
       answer:
         'Sed iure et cupiditate. Cupiditate qui corrupti enim quia eligendi natus non. Sit numquam incidunt aut ipsa minus assumenda dolorem.',
+    },
+  ],
+
+  questions: [
+    {
+      question: 'Ada layanan apa saja?',
+      answer: [
+        {
+          type: 'list',
+          value: [
+            'Penyewaan mobil untuk kebutuhan perusahaan (mobil penumpang dan barang)',
+            'Penyewaan alat berat seperti eskavator dan bulldozer',
+            'Penyediaan jasa transportasi untuk sewa jangka pendek maupun jangka panjang',
+            'Layanan dengan fokus pada kualitas, kenyamanan, keamanan, dan harga terbaik',
+          ],
+        },
+      ],
+    },
+    {
+      question: 'Syarat dan ketentuan Sewa Doang?',
+      answer: [
+        { type: 'header', value: 'Syarat' },
+        {
+          type: 'list',
+          value: [
+            'Sewa dapat digunakan oleh perusahaan atau perorangan',
+            'Wajib menggunakan supir (tidak bisa lepas kunci)',
+            'Mobil akan diantarkan ke lokasi yang telah ditentukan kostumer',
+            'Pembayaran menggunakan transfer BCA atau langsung di muka',
+          ],
+        },
+        { type: 'header', value: 'Ketentuan' },
+        {
+          type: 'list',
+          value: [
+            'Pemesanan untuk perorangan dibutuhkan data diri lengkap dengan KTP',
+            'Untuk Perusahaan membutuhkan KTP penanggung jawab dengan data diri lengkap. Pembayaran dilakukan 50% di muka dari total pembayaran.',
+          ],
+        },
+      ],
+    },
+    {
+      question: 'Sewa Doang tersedia di lokasi mana saja?',
+      answer: ['TODO'],
+    },
+    {
+      question: 'Apakah ada batas jarak tempuh (km)?',
+      answer: [
+        'Tidak ada. Penyewaam bisa langsung hubungi WhatsApp atau media sosial kami!',
+      ],
+    },
+    {
+      question: 'Bagaimana cara memesan mobil?',
+      answer: [
+        {
+          type: 'list',
+          value: [
+            'Anda bisa langsung menuju media sosial kami atau WhatsApp dengan klik menu “Sewa” di bagian paling atas laman Web.',
+            'SALAH: Atau isi form di laman awal web yang akan otomatis menuju ke admin kami dan penyewaan akan langsung di proses!',
+          ],
+        },
+      ],
+    },
+    {
+      question: 'Bagaimana prosedur pembayaran sewa?',
+      answer: ['Pembayaran dapat melewati transfer BCA atau bayar di muka.'],
     },
   ],
 }
@@ -86,6 +152,7 @@ export const aboutUs = {
   visionTitle: 'Visi',
   vision:
     'Menjadi perusahaan transportasi dan penyewaan alat berat terbaik yang mendukung kebutuhan bisnis dengan standar kualitas, kenyamanan, dan keamanan tinggi, serta terus berinovasi untuk menjawab tantangan dunia usaha yang semakin kompleks.',
+
   missionTitle: 'Misi',
   missions: [
     'Menyediakan solusi transportasi dan penyewaan alat berat yang efisien, efektif, dan aman.',
@@ -93,6 +160,9 @@ export const aboutUs = {
     'Mendukung kebutuhan transportasi perusahaan dengan harga kompetitif untuk sewa jangka pendek maupun jangka panjang.',
     'Berkomitmen untuk tumbuh dan berkembang bersama pelanggan melalui peningkatan kualitas layanan secara berkelanjutan.',
   ],
+
+  moreQuestions: 'Masih Ada Pertanyaan?',
+  contactUs: 'Hubungi Kami',
 }
 
 export type Car = {

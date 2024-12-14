@@ -11,5 +11,5 @@ definePageMeta({
 
   <SectionVisionAndMission />
   <SectionHistory />
-  <SectionFaqSummary id="faq" />
+  <SectionFaq id="faq" />
 </template>

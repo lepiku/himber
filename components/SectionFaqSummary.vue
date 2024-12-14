@@ -36,7 +36,7 @@ const backgroundStyles = computed(() => {
         <VCol :cols="7">
           <VExpansionPanels :model-value="[0]">
             <VExpansionPanel
-              v-for="(q, qIdx) in content.questions"
+              v-for="(q, qIdx) in content.summaryQuestions"
               :key="qIdx"
               :class="{ 'mt-4': qIdx > 0 }"
             >
