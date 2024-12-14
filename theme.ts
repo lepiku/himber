@@ -41,4 +41,4 @@ export const getThemeColors = (scheme: typeof lightTheme) => ({
 
 export const appTheme = materialTheme
 export const lightTheme = materialTheme.schemes.light
-export const darkTheme = materialTheme.schemes.dark
+// export const darkTheme = materialTheme.schemes.dark

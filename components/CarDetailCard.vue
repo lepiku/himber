@@ -77,7 +77,7 @@ const selectedPhoto = ref(0)
   top: 0;
 }
 .img-preview.selected {
-  outline: 4px solid rgb(var(--v-theme-secondary));
+  outline: 4px solid rgb(var(--v-theme-primary));
 }
 .img-preview:not(.selected) {
   cursor: pointer;

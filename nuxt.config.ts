@@ -1,7 +1,7 @@
 import { md3 } from 'vuetify/blueprints'
 
 import { website } from './content'
-import { darkTheme, getThemeColors, lightTheme } from './theme'
+import { getThemeColors, lightTheme } from './theme'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -31,9 +31,7 @@ export default defineNuxtConfig({
     },
   },
   linkChecker: {
-    skipInspections: [
-      'no-uppercase-chars'
-    ],
+    skipInspections: ['no-uppercase-chars'],
   },
 
   routeRules: {

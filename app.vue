@@ -1,3 +1,15 @@
+<script setup lang="ts">
+import dayjs from 'dayjs'
+import dayjsId from 'dayjs/locale/id'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+import { setLocale as yupSetLocale } from 'yup'
+import { id as yupId } from 'yup-locales'
+
+yupSetLocale(yupId)
+dayjs.locale(dayjsId)
+dayjs.extend(localizedFormat)
+</script>
+
 <template>
   <VApp>
     <AppBar />
