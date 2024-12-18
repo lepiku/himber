@@ -87,9 +87,10 @@ const servicesLinks = [
         </VCol>
 
         <!-- Location -->
-        <VCol :cols="12" :md="5">
-          <p class="text-h5">{{ website.location }}</p>
-          TODO
+        <VCol :cols="12" :md="5" id="lokasi">
+          <p class="text-h5 mb-4">{{ website.location }}</p>
+          <p class="mb-2">{{ website.locationName }}</p>
+          <LocationMap />
         </VCol>
       </VRow>
     </VContainer>

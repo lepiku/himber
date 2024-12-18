@@ -14,10 +14,16 @@ export const website = {
   socialMediaLinks: [
     // { title: 'Instagram', icon: 'mdi-instagram', href: '/' },
     // { title: 'Facebook', icon: 'mdi-facebook', href: '/' },
-    { title: 'WhatsApp', icon: 'mdi-whatsapp', href: 'https://api.whatsapp.com/send?phone=6282112593113'  },
+    {
+      title: 'WhatsApp',
+      icon: 'mdi-whatsapp',
+      href: 'https://api.whatsapp.com/send?phone=6282112593113',
+    },
   ],
   services: 'Layanan',
   location: 'Lokasi',
+  locationName:
+    'Perumahan Aralia Harapan Indah Blok HY 36 No. 37, Pusaka Rakyat, Tarumajaya, Bekasi',
 }
 
 export const sectionAboutUs = {
@@ -39,6 +45,7 @@ export type Faq = {
     | string
     | { type: 'list'; value: string[] }
     | { type: 'header'; value: string }
+    | { type: 'location' }
   )[]
 }
 export const sectionFaq = {
@@ -87,7 +94,7 @@ export const sectionFaq = {
     },
     {
       question: 'Sewa Doang tersedia di lokasi mana saja?',
-      answer: ['TODO'],
+      answer: [{ type: 'location' }],
     },
     {
       question: 'Apakah ada batas jarak tempuh (km)?',

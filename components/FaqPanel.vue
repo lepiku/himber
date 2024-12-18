@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Faq } from '~/content'
+import { type Faq, website } from '~/content'
 
 defineProps<Faq & { summary?: boolean }>()
 </script>
@@ -39,6 +39,17 @@ defineProps<Faq & { summary?: boolean }>()
             </tr>
           </tbody>
         </VTable>
+        <div v-else-if="a.type === 'location'">
+          <p class="mb-3">{{ website.locationName }}</p>
+          <div class="text-end">
+            <VBtn
+              text="Lihat Peta"
+              prepend-icon="mdi-map"
+              href="#lokasi"
+              color="primary"
+            />
+          </div>
+        </div>
       </template>
     </VExpansionPanelText>
   </VExpansionPanel>
