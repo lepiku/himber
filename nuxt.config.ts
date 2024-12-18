@@ -36,7 +36,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
-    '/old': { prerender: true },
+    '/armada-kami': { prerender: true },
     '/tentang-kami': { prerender: true },
   },
   vuetify: {
