@@ -2,7 +2,6 @@
 /**
  * @deprecated
  */
-
 import { cars } from '~/content'
 </script>
 

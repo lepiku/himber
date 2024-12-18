@@ -12,9 +12,9 @@ export const website = {
       'Ruko ARALIA Blok HY 36 No. 37 Harapan Indah 2, Pusaka Rakyat, Taruma Jaya, Kab. Bekasi, Jawa Barat',
   },
   socialMediaLinks: [
-    { title: 'Instagram', icon: 'mdi-instagram', href: '/' },
-    { title: 'Facebook', icon: 'mdi-facebook', href: '/' },
-    { title: 'WhatsApp', icon: 'mdi-whatsapp', href: '/' },
+    // { title: 'Instagram', icon: 'mdi-instagram', href: '/' },
+    // { title: 'Facebook', icon: 'mdi-facebook', href: '/' },
+    { title: 'WhatsApp', icon: 'mdi-whatsapp', href: 'https://api.whatsapp.com/send?phone=6282112593113'  },
   ],
   services: 'Layanan',
   location: 'Lokasi',
@@ -33,27 +33,19 @@ export const sectionAboutUs = {
   buttonMore: 'Pelajari Lebih Lanjut',
 }
 
+export type Faq = {
+  question: string
+  answer: (
+    | string
+    | { type: 'list'; value: string[] }
+    | { type: 'header'; value: string }
+  )[]
+}
 export const sectionFaq = {
   title: 'FAQ',
   header: 'Frequently Asked Questions',
   text: 'Apa saja yang sering ditanyakan melalui WhatsApp dan media sosial kami.',
   buttonMore: 'Selengkapnya',
-  summaryQuestions: [
-    {
-      question: 'Ada layanan apa saja?',
-      answer: 'Sewa mobil penumpang, mobil barang, dan lainnya.',
-    },
-    {
-      question: 'Sewa Doang tersedia di lokasi mana saja?',
-      answer:
-        'Iure consequatur ut et enim id doloribus aut. Qui perspiciatis dolorem omnis quis assumenda illum autem. Iste vero dolor assumenda. Esse tempora hic magni. Nulla voluptatem.',
-    },
-    {
-      question: 'Ada layanan apa saja?',
-      answer:
-        'Sed iure et cupiditate. Cupiditate qui corrupti enim quia eligendi natus non. Sit numquam incidunt aut ipsa minus assumenda dolorem.',
-    },
-  ],
 
   questions: [
     {
@@ -63,7 +55,7 @@ export const sectionFaq = {
           type: 'list',
           value: [
             'Penyewaan mobil untuk kebutuhan perusahaan (mobil penumpang dan barang)',
-            'Penyewaan alat berat seperti eskavator dan bulldozer',
+            // 'Penyewaan alat berat seperti eskavator dan bulldozer',
             'Penyediaan jasa transportasi untuk sewa jangka pendek maupun jangka panjang',
             'Layanan dengan fokus pada kualitas, kenyamanan, keamanan, dan harga terbaik',
           ],
@@ -106,20 +98,21 @@ export const sectionFaq = {
     {
       question: 'Bagaimana cara memesan mobil?',
       answer: [
-        {
-          type: 'list',
-          value: [
-            'Anda bisa langsung menuju media sosial kami atau WhatsApp dengan klik menu “Sewa” di bagian paling atas laman Web.',
-            'SALAH: Atau isi form di laman awal web yang akan otomatis menuju ke admin kami dan penyewaan akan langsung di proses!',
-          ],
-        },
+        // {
+        //   type: 'list',
+        //   value: [
+        //     'Anda bisa langsung menuju media sosial kami atau WhatsApp dengan klik menu “Sewa” di bagian paling atas laman Web.',
+        //     'SALAH: Atau isi form di laman awal web yang akan otomatis menuju ke admin kami dan penyewaan akan langsung di proses!',
+        //   ],
+        // },
+        'Anda bisa langsung menuju media sosial kami atau WhatsApp dengan klik menu “Sewa” di bagian paling atas laman Web.',
       ],
     },
     {
       question: 'Bagaimana prosedur pembayaran sewa?',
       answer: ['Pembayaran dapat melewati transfer BCA atau bayar di muka.'],
     },
-  ],
+  ] as Faq[],
 }
 
 export const historyTexts = [

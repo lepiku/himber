@@ -12,7 +12,7 @@ dayjs.extend(localizedFormat)
 
 <template>
   <VApp>
-    <NavBar />
+    <AppNavBar />
     <VMain class="pt-16">
       <NuxtPage />
     </VMain>

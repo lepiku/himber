@@ -7,8 +7,8 @@ import { aboutUs as content } from '~/content'
     <p class="text-h5 text-sm-h4 text-center text-primary">
       Visi dan Misi Kami
     </p>
-    <VRow class="mt-4">
-      <VCol>
+    <VRow class="mt-4 mb-4">
+      <VCol :cols="12" :sm="6">
         <VExpansionPanels>
           <VExpansionPanel class="rounded-xl">
             <VExpansionPanelTitle
@@ -25,7 +25,7 @@ import { aboutUs as content } from '~/content'
           </VExpansionPanel>
         </VExpansionPanels>
       </VCol>
-      <VCol>
+      <VCol :cols="12" :sm="6">
         <VExpansionPanels>
           <VExpansionPanel class="rounded-xl">
             <VExpansionPanelTitle

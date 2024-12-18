@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { VBtn } from 'vuetify/components';
+import type { VBtn } from 'vuetify/components'
 import { messageTemplate, website } from '~/content'
 
-const navItems: VBtn['$props'][]  = [
+const navItems: VBtn['$props'][] = [
   { text: 'Beranda', to: '/', prependIcon: 'mdi-home' },
   { text: 'Armada Kami', to: '/armada-kami', prependIcon: 'mdi-car' },
   { text: 'Tentang Kami', to: '/tentang-kami', prependIcon: 'mdi-information' },

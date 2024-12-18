@@ -41,20 +41,18 @@ const textFields = computed<VTextField['$props'][]>(() => [
     errorMessages: errors.value.date,
   },
 ])
-const submit = handleSubmit(
-  (values) => {
-    console.log(values)
-    window.open(
-      whatsappLink(
-        messageTemplate.form(
-          values.name,
-          values.location,
-          dayjs(values.date).format('dddd, LL'),
-        ),
+const submit = handleSubmit((values) => {
+  console.log(values)
+  window.open(
+    whatsappLink(
+      messageTemplate.form(
+        values.name,
+        values.location,
+        dayjs(values.date).format('dddd, LL'),
       ),
-    )
-  },
-)
+    ),
+  )
+})
 </script>
 
 <template>
@@ -62,7 +60,13 @@ const submit = handleSubmit(
     <form @submit.prevent="submit">
       <VCardText class="pa-6">
         <VRow no-gutters>
-          <VCol v-for="field in textFields" :key="field.name">
+          <VCol
+            v-for="(field, idx) in textFields"
+            :key="field.name"
+            :cols="12"
+            class="pb-4 pb-md-0 flex-md-1-0-0"
+            :class="{}"
+          >
             <VTextField
               v-bind="field"
               variant="solo-filled"
@@ -71,7 +75,7 @@ const submit = handleSubmit(
               hide-details="auto"
             />
           </VCol>
-          <VCol cols="auto">
+          <VCol :cols="12" md="auto" class="text-center">
             <VBtn
               color="tertiary"
               size="x-large"

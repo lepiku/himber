@@ -16,7 +16,7 @@ definePageMeta({
   <SectionFaq id="faq" />
 
   <VContainer class="text-center py-16">
-    <p class="text-h3 text-primary">{{ content.moreQuestions }}</p>
+    <p class="text-h4 text-sm-h3 text-primary">{{ content.moreQuestions }}</p>
     <VBtn
       color="tertiary"
       :text="content.contactUs"

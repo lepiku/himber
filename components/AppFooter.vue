@@ -17,10 +17,10 @@ const contactLinks = [
 
 const servicesLinks = [
   { label: 'Beranda', to: '/' },
-  { label: 'Armada Kami', to: '/' },
+  { label: 'Armada Kami', to: '/armada-kami' },
   { label: 'Tentang Kami', to: { name: 'about-us' } },
   { label: 'FAQ', to: { name: 'about-us', hash: '#faq' } },
-  { label: 'Pemesanan', to: '/' },
+  // { label: 'Pemesanan', to: '/' },
 ]
 </script>
 

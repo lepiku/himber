@@ -7,6 +7,12 @@ const backgroundStyles = computed(() => {
   const imgUrl = img('/images/bg-faq.jpg')
   return { backgroundImage: `url('${imgUrl}')` }
 })
+
+const questions = [
+  content.questions[0],
+  content.questions[2],
+  content.questions[4],
+]
 </script>
 
 <template>
@@ -14,7 +20,7 @@ const backgroundStyles = computed(() => {
     <div class="faq-bg-overlay bg-primary-5"></div>
     <VContainer class="d-flex align-center py-8 bg-primary">
       <VRow class="align-center">
-        <VCol :cols="5">
+        <VCol :cols="12" :md="5">
           <div>
             <p class="text-h5 text-tertiary font-weight-bold">
               {{ content.title }}
@@ -33,20 +39,15 @@ const backgroundStyles = computed(() => {
             </VBtn>
           </div>
         </VCol>
-        <VCol :cols="7">
+        <VCol :cols="12" :md="7">
           <VExpansionPanels :model-value="[0]">
-            <VExpansionPanel
-              v-for="(q, qIdx) in content.summaryQuestions"
-              :key="qIdx"
-              :class="{ 'mt-4': qIdx > 0 }"
-            >
-              <VExpansionPanelTitle color="secondary" class="font-weight-bold">
-                {{ q.question }}
-              </VExpansionPanelTitle>
-              <VExpansionPanelText>
-                {{ q.answer }}
-              </VExpansionPanelText>
-            </VExpansionPanel>
+            <FaqPanel
+              v-for="(faq, faqIdx) in questions"
+              :key="faqIdx"
+              v-bind="faq"
+              summary
+              :class="{ 'mt-4': faqIdx > 0 }"
+            />
           </VExpansionPanels>
         </VCol>
       </VRow>
