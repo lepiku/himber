@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import type { VBtn } from 'vuetify/components';
 import { messageTemplate, website } from '~/content'
 
-const navItems = [
-  { text: 'Beranda', to: '/', icon: 'mdi-home' },
-  { text: 'Armada Kami', to: '/old', icon: 'mdi-car' },
-  { text: 'Tentang Kami', to: '/tentang-kami', icon: 'mdi-information' },
+const navItems: VBtn['$props'][]  = [
+  { text: 'Beranda', to: '/', prependIcon: 'mdi-home' },
+  { text: 'Armada Kami', to: '/armada-kami', prependIcon: 'mdi-car' },
+  { text: 'Tentang Kami', to: '/tentang-kami', prependIcon: 'mdi-information' },
   // { text: 'Kontak', to: '/kontak', icon: 'mdi-phone' }
 ]
 
@@ -28,14 +29,11 @@ const drawer = ref(false)
         <VBtn
           v-for="(item, i) in navItems"
           :key="i"
-          :to="item.to"
-          :prepend-icon="item.icon"
+          v-bind="item"
           class="text-none"
           style="letter-spacing: unset"
           color="primary"
-        >
-          {{ item.text }}
-        </VBtn>
+        />
       </div>
       <VSpacer class="d-none d-sm-block" />
       <VBtn
@@ -64,7 +62,7 @@ const drawer = ref(false)
         :to="item.to"
       >
         <template v-slot:prepend>
-          <VIcon :icon="item.icon" />
+          <VIcon :icon="item.prependIcon" />
         </template>
         <VListItemTitle v-text="item.text" />
       </VListItem>

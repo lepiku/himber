@@ -54,9 +54,6 @@ const submit = handleSubmit(
       ),
     )
   },
-  (v) => {
-    console.log('err', v)
-  },
 )
 </script>
 

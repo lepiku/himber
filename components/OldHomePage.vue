@@ -1,4 +1,8 @@
 <script setup lang="ts">
+/**
+ * @deprecated
+ */
+
 import { cars } from '~/content'
 </script>
 
