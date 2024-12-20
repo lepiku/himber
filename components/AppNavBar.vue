@@ -15,17 +15,17 @@ const drawer = ref(false)
 <template>
   <VAppBar color="primary-container">
     <template #prepend>
-      <VAppBarNavIcon class="d-sm-none" @click="drawer = !drawer" />
+      <VAppBarNavIcon class="text-primary d-csm-none" @click="drawer = !drawer" />
     </template>
 
-    <div class="d-flex w-100">
-      <NuxtImg src="/images/logo.png" width="100" height="38" class="ms-4" />
-      <VAppBarTitle class="text-ephesis d-flex align-center ps-4">
+    <div class="d-flex w-100 align-center">
+      <NuxtImg src="/images/logo-primary.png" width="100" height="38" class="ms-4" />
+      <VAppBarTitle class="text-ephesis text-primary d-flex align-center ps-4">
         <RouterLink to="/" class="nostyle d-none d-md-block">
           {{ website.name }}
         </RouterLink>
       </VAppBarTitle>
-      <div class="d-none d-sm-block">
+      <div class="d-none d-csm-block">
         <VBtn
           v-for="(item, i) in navItems"
           :key="i"
@@ -35,7 +35,7 @@ const drawer = ref(false)
           color="primary"
         />
       </div>
-      <VSpacer class="d-none d-sm-block" />
+      <VSpacer class="d-none d-csm-block" />
       <VBtn
         color="tertiary"
         variant="elevated"
@@ -54,7 +54,7 @@ const drawer = ref(false)
     temporary
     color="primary-container"
   >
-    <VList class="d-sm-none">
+    <VList class="d-csm-none">
       <VListItem
         v-for="(item, i) in navItems"
         :key="i"
@@ -88,6 +88,15 @@ const drawer = ref(false)
   .v-toolbar-title,
   .app-bar-desktop {
     display: unset;
+  }
+}
+
+@media (min-width: 670px) {
+  .d-csm-none {
+    display: none !important;
+  }
+  .d-csm-block {
+    display: block !important;
   }
 }
 </style>
