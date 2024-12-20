@@ -8,5 +8,6 @@ useSeoMeta({
   <SectionCover />
   <SectionMain />
   <SectionWhyUs />
+  <SectionSponsors />
   <SectionFaqSummary />
 </template>
