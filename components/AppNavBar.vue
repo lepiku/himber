@@ -15,11 +15,19 @@ const drawer = ref(false)
 <template>
   <VAppBar color="primary-container">
     <template #prepend>
-      <VAppBarNavIcon class="text-primary d-csm-none" @click="drawer = !drawer" />
+      <VAppBarNavIcon
+        class="text-primary d-csm-none"
+        @click="drawer = !drawer"
+      />
     </template>
 
     <div class="d-flex w-100 align-center">
-      <NuxtImg src="/images/logo-primary.png" width="100" height="38" class="ms-4" />
+      <NuxtImg
+        src="/images/logo-primary.png"
+        width="100"
+        height="38"
+        class="ms-4"
+      />
       <VAppBarTitle class="text-ephesis text-primary d-flex align-center ps-4">
         <RouterLink to="/" class="nostyle d-none d-md-block">
           {{ website.name }}

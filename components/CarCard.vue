@@ -26,7 +26,7 @@ const dialog = ref(false)
             :src="car.img"
             class="card-img"
             quality="20"
-            sizes="80vw xs:300"
+            sizes="75vw xs:300"
           />
           <h4 class="text-center text-black">{{ car.name }}</h4>
           <p>Rp {{ car.price.toLocaleString('id') }} / hari</p>
@@ -43,7 +43,8 @@ const dialog = ref(false)
         :href="whatsappLink(messageTemplate.car(car.name))"
         target="_blank"
       >
-        Sewa Sekarang
+        <span class="d-none d-sm-inline">Sewa Sekarang</span>
+        <span class="d-sm-none">Sewa</span>
       </VBtn>
       <VBtn
         @click="dialog = true"
@@ -67,4 +68,8 @@ const dialog = ref(false)
 
 .card-buttons
   margin-top: -18px
+
+@media(min-width: 600px)
+  .d-sm-inline-grid
+    display: inline-grid !important
 </style>

@@ -5,7 +5,8 @@
       <p class="text-h4 font-weight-bold text-primary">Mobil Unggulan Kami</p>
       <VSpacer />
       <VBtn append-icon="mdi-chevron-right" to="/armada-kami">
-        Lihat Lainnya
+        <span class="d-sm-none">Lainnya</span>
+        <span class="d-none d-sm-inline">Lihat Lainnya</span>
       </VBtn>
     </div>
     <CarListHorizontal class="mb-6" />

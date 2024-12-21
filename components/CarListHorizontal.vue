@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { type Car, cars } from '~/content'
 
+const { width } = useWindowSize()
+
 const groupedCars = computed(() => {
+  const perWindow = Math.min(
+    Math.max(Math.floor(((width.value ?? 1200) - 128) / 336), 1),
+    3,
+  )
   const result: Car[][] = []
   cars.forEach((c, i) => {
-    if (i % 3 === 0) {
+    if (i % perWindow === 0) {
       result.push([c])
     } else {
       result[result.length - 1].push(c)
