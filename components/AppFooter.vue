@@ -1,63 +1,104 @@
 <script setup lang="ts">
-import { website } from '~/data'
+import { website } from '~/content'
 
-const p = website.contact.phone
-const phoneFormat = p.slice(0, 4) + '-' + p.slice(4, 8) + '-' + p.slice(8)
+const contact = website.contact
+const contactLinks = [
+  {
+    label: contact.phoneText,
+    icon: 'mdi-phone',
+    href: `tel:${contact.phone}`,
+  },
+  {
+    label: contact.email,
+    icon: 'mdi-email',
+    href: `mailto:${contact.email}`,
+  },
+]
+
+const servicesLinks = [
+  { label: 'Beranda', to: '/' },
+  { label: 'Armada Kami', to: '/armada-kami' },
+  { label: 'Tentang Kami', to: { name: 'about-us' } },
+  { label: 'FAQ', to: { name: 'about-us', hash: '#faq' } },
+  // { label: 'Pemesanan', to: '/' },
+]
 </script>
 
 <template>
-  <div id="kontak" class="bg-surface-variant">
-    <VContainer class="pt-6 pb-16">
-      <h2>Hubungi Kami</h2>
+  <div class="bg-primary">
+    <VContainer class="py-8">
       <VRow>
-        <VCol cols="12" md="6">
-          <div class="d-flex flex-column align-start">
-            <p class="my-2 text-ephesis">{{ website.name }}</p>
+        <!-- Description -->
+        <VCol :cols="12" :md="3" class="text-center">
+          <NuxtImg src="/images/logo.png" width="100" class="mx-auto mt-1" />
+          <p class="text-h4 text-ephesis">{{ website.name }}</p>
+          <p class="text-body-2 text-medium-emphasis">
+            {{ website.description }}
+          </p>
+          <div class="d-flex justify-center">
             <VBtn
-              color="surface-variant"
+              v-for="(link, linkIdx) in website.socialMediaLinks"
+              :key="linkIdx"
+              :icon="link.icon"
+              :href="link.href"
+              :title="link.title"
+              target="_blank"
               variant="flat"
-              prepend-icon="mdi-phone"
-              :href="'tel:' + website.contact.phone"
-              class="text-none"
+            />
+          </div>
+        </VCol>
+
+        <!-- Contacts and Services -->
+        <VCol :cols="12" :md="4">
+          <p class="text-h5">{{ website.contactUs }}</p>
+          <div
+            class="text-body-2 text-medium-emphasis d-flex flex-column align-start"
+          >
+            <VBtn
+              v-for="link in contactLinks"
+              :href="link.href"
+              :prepend-icon="link.icon"
+              color="primary"
+              variant="flat"
+              density="comfortable"
+              class="text-none text-spacing-normal ms-n4"
             >
-              {{ phoneFormat }} (Herni)
+              {{ link.label }}
             </VBtn>
+            <p class="mt-4">{{ contact.address }}</p>
+          </div>
+
+          <p class="text-h5 mt-6">{{ website.services }}</p>
+          <div
+            class="text-body-2 text-medium-emphasis d-flex flex-column align-start"
+          >
             <VBtn
-              color="surface-variant"
+              v-for="l in servicesLinks"
+              :to="l.to"
+              :active="false"
+              color="primary"
               variant="flat"
-              prepend-icon="mdi-email"
-              :href="'mailto:' + website.contact.email"
-              class="text-none"
+              density="comfortable"
+              class="text-none text-spacing-normal ms-n4"
             >
-              {{ website.contact.email }}
+              {{ l.label }}
             </VBtn>
           </div>
         </VCol>
-        <VCol cols="12" md="6">
-          <p class="my-2">Alamat:</p>
-          <p class="mt-2 mb-4">
-            {{ website.contact.address }}
-          </p>
-          <VBtn
-            v-if="$route.path === '/'"
-            to="/tentang-kami"
-            variant="flat"
-            color="primary"
-            prepend-icon="mdi-information"
-          >
-            Tentang Kami
-          </VBtn>
+
+        <!-- Location -->
+        <VCol :cols="12" :md="5" id="lokasi">
+          <p class="text-h5 mb-4">{{ website.location }}</p>
+          <p class="mb-2">{{ website.locationName }}</p>
+          <LocationMap />
         </VCol>
       </VRow>
     </VContainer>
   </div>
 </template>
 
-<style scoped>
-#kontak .v-btn {
-  letter-spacing: unset;
-}
-.text-ephesis {
-  font-size: 24pt;
-}
+<style scoped lang="sass">
+.text-medium-emphasis
+  color: inherit !important
+  opacity: 0.6
 </style>

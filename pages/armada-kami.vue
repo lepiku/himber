@@ -1,3 +1,3 @@
 <template>
-  <OldHomePage />
+  <SectionCarList />
 </template>

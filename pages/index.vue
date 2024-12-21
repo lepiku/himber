@@ -1,3 +1,13 @@
+<script setup lang="ts">
+useSeoMeta({
+  titleTemplate: '%websiteName',
+})
+</script>
+
 <template>
-  <VMain />
+  <SectionCover />
+  <SectionMain />
+  <SectionWhyUs />
+  <SectionSponsors />
+  <SectionFaqSummary />
 </template>
