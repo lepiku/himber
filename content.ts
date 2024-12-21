@@ -19,6 +19,11 @@ export const website = {
       icon: 'mdi-whatsapp',
       href: 'https://api.whatsapp.com/send?phone=6282112593113',
     },
+    {
+      title: 'Tiktok',
+      icon: 'mdi-music-note',
+      href: 'https://tiktok.com/@sewa_doang',
+    },
   ],
   services: 'Layanan',
   location: 'Lokasi',
