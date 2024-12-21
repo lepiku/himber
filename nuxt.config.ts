@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/google-fonts',
     '@nuxtjs/seo',
+    '@vueuse/nuxt',
   ],
 
   ssr: true,
