@@ -6,6 +6,7 @@ defineProps<Faq & { summary?: boolean }>()
 
 <template>
   <VExpansionPanel
+    class="faq-panel"
     style="
       border-top-left-radius: 24px !important;
       border-top-right-radius: 24px !important;
@@ -29,16 +30,26 @@ defineProps<Faq & { summary?: boolean }>()
         <p v-else-if="a.type === 'header'" class="font-weight-bold">
           {{ a.value }}
         </p>
-        <VTable v-else-if="a.type === 'list'">
+        <table
+          v-else-if="a.type === 'list'"
+          :style="{
+            borderCollapse: 'collapse',
+          }"
+        >
           <tbody>
             <tr v-for="(m, idx) in a.value" :key="idx">
-              <td class="px-0 pb-0 border-0 pt-2" style="vertical-align: top">
+              <th class="py-1 border-0" style="vertical-align: top">
                 <VBadge :content="idx + 1" inline color="tertiary" />
+              </th>
+              <td
+                class="pb-1 flex-fill border-0 text-body-1"
+                style="padding-top: 6px"
+              >
+                {{ m }}
               </td>
-              <td class="flex-fill border-0 text-body-1">{{ m }}</td>
             </tr>
           </tbody>
-        </VTable>
+        </table>
         <div v-else-if="a.type === 'location'">
           <p class="mb-3">{{ website.locationName }}</p>
           <div class="text-end">
@@ -54,3 +65,8 @@ defineProps<Faq & { summary?: boolean }>()
     </VExpansionPanelText>
   </VExpansionPanel>
 </template>
+
+<style lang="sass">
+.faq-panel table .v-badge__wrapper
+  margin: 0 8px 0 0
+</style>

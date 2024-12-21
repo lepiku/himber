@@ -1,15 +1,7 @@
 <script setup lang="ts">
+import { sponsors } from '~/content'
+
 const size = '176px'
-const sponsors = [
-  {
-    imgSrc: '/images/logo-primary.png',
-    imgAttr: { width: 144 },
-  },
-  {
-    imgSrc: '/images/logo-2hri.png',
-    imgAttr: { width: 120 },
-  },
-]
 </script>
 
 <template>
