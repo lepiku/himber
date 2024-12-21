@@ -22,16 +22,24 @@ const drawer = ref(false)
     </template>
 
     <div class="d-flex w-100 align-center">
-      <NuxtImg
-        src="/images/logo-primary.png"
-        width="100"
-        height="38"
-        class="ms-4"
-      />
+      <VBtn
+        to="/"
+        class="pa-0 ms-3"
+        variant="text"
+        color="primary"
+        :active="false"
+      >
+        <NuxtImg
+          src="/images/logo-primary.png"
+          width="100"
+          height="38"
+          alt="Logo"
+        />
+      </VBtn>
       <VAppBarTitle class="text-ephesis text-primary d-flex align-center ps-4">
-        <RouterLink to="/" class="nostyle d-none d-md-block">
+        <NuxtLink to="/" class="nostyle d-none d-md-block">
           {{ website.name }}
-        </RouterLink>
+        </NuxtLink>
       </VAppBarTitle>
       <div class="d-none d-csm-block">
         <VBtn
